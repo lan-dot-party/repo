@@ -1,0 +1,59 @@
+# Welche Tools ins Repo kommen und wie ihre Release-Assets heißen.
+# Ein neues Tool = ein neuer [[tool]]-Block. Pfade im Pool: <format>/pool/<name>/<datei>
+# "generic" = distro-unabhängig (landet in allen Suites/Distro-Repos).
+# "per_distro" = Dateiname enthält ein Distro-Tag, Zuordnung über distros.toml.
+
+[[tool]]
+name     = "ers-proxy"
+repo     = "lan-dot-party/ERS-Proxy"
+homepage = "https://github.com/lan-dot-party/ERS-Proxy"
+tag      = '^v\d+\.\d+\.\d+$'
+build    = "generic"
+deb      = '^ers-proxy_.+_(amd64|arm64|armv7)\.deb$'
+rpm      = '^ers-proxy_.+_(amd64|arm64|armv7)\.rpm$'
+arch     = '^ers-proxy_.+_(amd64|arm64|armv7)\.pkg\.tar\.zst$'
+apk      = '^ers-proxy_.+_(amd64|arm64|armv7)\.apk$'
+
+[[tool]]
+name     = "lanleecher"
+repo     = "lan-dot-party/LANLeecher"
+homepage = "https://lan.party/lanleecher.php"
+tag      = '^v\d+\.\d+\.\d+$'
+build    = "generic"
+deb      = '^lanleecher_.+_(amd64|arm64|armv7)\.deb$'
+rpm      = '^lanleecher_.+_(amd64|arm64|armv7)\.rpm$'
+arch     = '^lanleecher_.+_(amd64|arm64|armv7)\.pkg\.tar\.zst$'
+apk      = '^lanleecher_.+_(amd64|arm64|armv7)\.apk$'
+
+[[tool]]
+name     = "flowgauge"
+repo     = "lan-dot-party/FlowGauge"
+homepage = "https://lan.party/flowgauge.php"
+tag      = '^v\d+\.\d+\.\d+$'
+build    = "generic"
+deb      = '^flowgauge_.+_linux_(amd64|arm64|armv7)\.deb$'
+rpm      = '^flowgauge_.+_linux_(amd64|arm64|armv7)\.rpm$'
+arch     = '^flowgauge_.+_linux_(amd64|arm64|armv7)\.pkg\.tar\.zst$'   # erst ab Release mit archlinux-Format
+apk      = '^flowgauge_.+_linux_(amd64|arm64|armv7)\.apk$'
+
+[[tool]]
+name     = "lanpilot"
+repo     = "lan-dot-party/LANPilot"
+homepage = "https://lan.party/lanpilot.php"
+tag      = '^v?\d+\.\d+\.\d+$'
+build    = "per_distro"
+deb      = '^lanpilot_.+-\d+\.(?P<distro>debian\d+|ubuntu[\d.]+)_amd64\.deb$'
+rpm      = '^lanpilot-.+-\d+\.(?P<distro>fedora\d+|rocky\d+(\.\d+)?)\.x86_64\.rpm$'
+arch     = '^lanpilot-.+-x86_64\.pkg\.tar\.zst$'
+# kein apk
+
+[[tool]]
+name     = "discord-gameserver-notifier"
+repo     = "lan-dot-party/Discord-Gameserver-Notifier"
+homepage = "https://lan.party/discord-gameserver-notifier.php"
+tag      = '^v?\d+\.\d+\.\d+$'
+build    = "generic"
+deb      = '^discord-gameserver-notifier_.+_all\.deb$'
+rpm      = '^discord-gameserver-notifier-.+\.noarch\.rpm$'
+arch     = '^discord-gameserver-notifier-.+-any\.pkg\.tar\.zst$'
+# kein apk

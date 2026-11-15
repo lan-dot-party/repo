@@ -1,0 +1,31 @@
+# Static package repository served by Apache.
+# The http -> https redirect is handled by the web server configuration, not here.
+
+<IfModule mod_mime.c>
+    AddType application/vnd.debian.binary-package .deb
+    AddType application/x-rpm .rpm
+    AddType application/zstd .zst
+    AddType application/octet-stream .db .files .apk
+    AddType application/pgp-signature .sig
+    AddType text/plain .asc
+    AddType application/json .json
+</IfModule>
+
+# Directory listings for the pool directories: left disabled on purpose. If
+# AllowOverride does not include Options, "Options +Indexes" makes Apache
+# answer 500 for the whole site. Enable it in the web server configuration
+# or uncomment the three lines below once you know the host allows it.
+#<IfModule mod_autoindex.c>
+#    Options +Indexes
+#</IfModule>
+
+<IfModule mod_headers.c>
+    # Metadata must always be revalidated.
+    <FilesMatch "^(InRelease|Release|Release\.gpg|Packages.*|repomd\.xml.*|APKINDEX.*|lan-party\.db.*|lan-party\.files.*|index\.html|packages\.json|setup\.sh)$">
+        Header set Cache-Control "no-cache"
+    </FilesMatch>
+    # Package files are immutable per file name.
+    <FilesMatch "\.(deb|rpm|apk|pkg\.tar\.zst)$">
+        Header set Cache-Control "public, max-age=31536000"
+    </FilesMatch>
+</IfModule>

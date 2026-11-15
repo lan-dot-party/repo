@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lan.party package repository</title>
+    <meta name="description" content="Signed package repository for all lan.party tools: apt, dnf, pacman and apk.">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Main">
+            <a class="nav-logo" href="https://lan.party">
+                <img src="https://lan.party/Dot_Transparent-White.png" alt="LAN Party Events" class="logo">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="https://lan.party">lan.party</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li class="nav-push"><a href="https://github.com/lan-dot-party/repo">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>lan.party package repository</h1>
+            <p class="lead">
+                One repository for all lan.party tools. The repository is signed and checked by your package manager, and it works with
+                <strong>apt</strong>, <strong>dnf</strong>, <strong>pacman</strong> and <strong>apk</strong>.
+                Once it is set up, new releases arrive through your normal system updates.
+            </p>
+
+            <section class="panel" id="key" aria-labelledby="key-h">
+                <h2 id="key-h">Signing key</h2>
+                <p>The repository metadata (and every rpm and Arch package) is signed with this GPG key. Compare the fingerprint before you trust it:</p>
+                <p class="fingerprint"><code>{{fingerprint_pretty}}</code></p>
+                <ul class="keylinks">
+                    <li><a href="lan-party.asc">lan-party.asc</a> (armored, rpm / pacman)</li>
+                    <li><a href="lan-party.gpg">lan-party.gpg</a> (binary, apt)</li>
+                    <li><a href="lan-party.rsa.pub">lan-party.rsa.pub</a> (apk)</li>
+                </ul>
+            </section>
+
+            <section class="panel" id="quick" aria-labelledby="quick-h">
+                <h2 id="quick-h">Quick setup</h2>
+                <p>Detects Debian/Ubuntu, Fedora, RHEL/Rocky/Alma, Arch or Alpine and runs the matching commands from below:</p>
+                {{quick_setup}}
+                <p class="hint">Prefer to read before you run? Open <a href="setup.sh">setup.sh</a> or use the manual steps below.</p>
+            </section>
+
+            <section id="manual" aria-labelledby="manual-h">
+                <h2 id="manual-h">Manual setup</h2>
+                <p class="hint">Run the commands as root (for example in <code>sudo -i</code>).</p>
+
+                <div class="tabs">
+                    <section class="tabpanel" id="tab-deb" data-tab="Debian &amp; Ubuntu">
+                        <h3>Debian &amp; Ubuntu</h3>
+                        <div class="suite-row">
+                            <label for="suite">Distribution</label>
+                            <select id="suite" name="suite">
+{{suite_options}}
+                            </select>
+                        </div>
+                        <p class="hint">Packages that are built per distribution only exist for the matching suite.
+                        <code>stable</code> contains only distribution-independent packages and works everywhere.</p>
+                        <h4>deb822 (.sources, recommended)</h4>
+                        {{snip_deb_sources}}
+                        <h4>Classic one-line (.list)</h4>
+                        {{snip_deb_list}}
+                        <p>Then install a tool:</p>
+                        {{code_apt_install}}
+                    </section>
+
+                    <section class="tabpanel" id="tab-rpm" data-tab="Fedora / RHEL / Rocky">
+                        <h3>Fedora / RHEL / Rocky</h3>
+                        <h4>Rocky / AlmaLinux / RHEL 9+</h4>
+                        <p class="hint">On Enterprise Linux <code>$releasever</code> is the major version (9).</p>
+                        {{snip_rpm_el}}
+                        <h4>Fedora</h4>
+                        {{snip_rpm_fedora}}
+                        <p>Then install a tool:</p>
+                        {{code_dnf_install}}
+                    </section>
+
+                    <section class="tabpanel" id="tab-arch" data-tab="Arch Linux">
+                        <h3>Arch Linux</h3>
+                        {{snip_arch}}
+                        <p>Then install a tool:</p>
+                        {{code_pacman_install}}
+                    </section>
+
+                    <section class="tabpanel" id="tab-alpine" data-tab="Alpine">
+                        <h3>Alpine</h3>
+                        {{snip_alpine}}
+                        <p>Then install a tool:</p>
+                        {{code_apk_install}}
+                    </section>
+                </div>
+            </section>
+
+            <section id="packages" aria-labelledby="packages-h">
+                <h2 id="packages-h">Packages</h2>
+{{packages_table}}
+            </section>
+
+            <section id="faq" aria-labelledby="faq-h">
+                <h2 id="faq-h">FAQ</h2>
+
+                <details class="panel">
+                    <summary>I re-installed but still have the old build of the same version</summary>
+                    <p>A release can be rebuilt without a version bump. Package managers consider the version
+                    unchanged and will not replace it on a normal update. Force the new build with:</p>
+{{faq_reinstall}}
+                </details>
+
+                <details class="panel">
+                    <summary>A version disappeared</summary>
+                    <p>When a release is deleted on GitHub it is removed from the repository as well. Packages that are
+                    already installed stay on your system. To go back to a version that is still available:</p>
+{{faq_downgrade}}
+                </details>
+
+                <details class="panel">
+                    <summary>Arch: only the newest version is in the db</summary>
+                    <p>The pacman database lists only the newest version of each package. Older files that are still
+                    on the server can be installed directly:</p>
+{{faq_arch_old}}
+                </details>
+
+                <details class="panel">
+                    <summary>Is this the official source?</summary>
+                    <p>Yes. Packages are taken unmodified from the GitHub releases of
+                    <a href="https://github.com/lan-dot-party">github.com/lan-dot-party</a>, then signed with the key
+                    <code>{{fingerprint_pretty}}</code>.</p>
+                </details>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <nav class="footer-nav" aria-label="Footer">
+                <a href="https://lan.party" class="footer-link">lan.party</a>
+                <a href="https://github.com/lan-dot-party/repo" class="footer-link">Source on GitHub</a>
+            </nav>
+            <p>&copy; {{year}} LAN Party Events. Page generated {{generated}}.</p>
+        </div>
+    </footer>
+</body>
+</html>

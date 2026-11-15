@@ -1,0 +1,5 @@
+/work/
+/public/
+*.asc.private
+*.rsa
+__pycache__/

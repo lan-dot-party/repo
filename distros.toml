@@ -1,0 +1,43 @@
+# Suites (deb) und Distro-Repos (rpm). Generische Pakete landen überall,
+# per_distro-Pakete nur dort, wo ihr Distro-Tag (Regex auf die "distro"-Gruppe) passt.
+
+[deb]
+architectures = ["amd64", "arm64", "armhf"]
+component     = "main"
+
+[[deb.suite]]
+name = "bookworm"   # Debian 12
+tags = '^debian12$'
+[[deb.suite]]
+name = "trixie"     # Debian 13
+tags = '^debian13$'
+[[deb.suite]]
+name = "noble"      # Ubuntu 24.04
+tags = '^ubuntu24\.04$'
+[[deb.suite]]
+name = "resolute"   # Ubuntu 26.04
+tags = '^ubuntu26\.04$'
+[[deb.suite]]
+name = "stable"     # nur distro-unabhängige Pakete
+tags = '$^'
+
+[rpm]
+architectures = ["x86_64", "aarch64", "armv7hl", "noarch"]
+
+[[rpm.repo]]
+path = "el/9"
+tags = '^rocky9(\.\d+)?$'
+[[rpm.repo]]
+path = "fedora/44"
+tags = '^fedora44$'
+[[rpm.repo]]
+path = "generic"
+tags = '$^'
+
+[arch]
+architectures = ["x86_64", "aarch64", "armv7h"]
+repo_name     = "lan-party"
+
+[alpine]
+architectures = ["x86_64", "aarch64", "armv7"]
+branch        = "main"

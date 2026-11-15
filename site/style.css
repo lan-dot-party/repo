@@ -1,0 +1,208 @@
+:root {
+    --bg: #0f0f0f;
+    --text: #ffffff;
+    --panel: #2c3e50;
+    --panel-dark: #1f2d3a;
+    --link: #3498db;
+    --link-hover: #2980b9;
+    --accent: #4682b4;
+    --muted: #99a3ad;
+    --code-bg: #0a0a0a;
+    --radius: 8px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+main { flex: 1 0 auto; margin-bottom: 40px; }
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+a { color: var(--link); }
+a:hover { color: var(--link-hover); }
+
+h1, h2, h3, h4 { line-height: 1.25; }
+h1 { margin: 0.4em 0 0.3em; }
+h2 { margin: 1.6em 0 0.5em; border-bottom: 2px solid var(--accent); padding-bottom: 0.2em; }
+.panel h2 { margin-top: 0; border: 0; }
+h4 { margin: 1.4em 0 0.4em; color: #cfd8e0; }
+.lead { font-size: 1.1rem; }
+.hint { color: var(--muted); font-size: 0.92rem; }
+
+code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.92em;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+}
+
+.panel {
+    background: var(--panel);
+    padding: 20px 24px;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+}
+
+.fingerprint code {
+    display: block;
+    font-size: 1.15rem;
+    letter-spacing: 0.04em;
+    background: var(--code-bg);
+    padding: 12px 14px;
+    border-radius: var(--radius);
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.keylinks { padding-left: 1.2em; margin-bottom: 0; }
+
+/* Header, same look as lan.party */
+.site-header { background: var(--panel); padding: 0.75rem 0; }
+.site-nav {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.nav-logo { display: flex; align-items: center; flex-shrink: 0; }
+.logo { height: 40px; width: auto; }
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    flex-wrap: wrap;
+}
+.nav-menu a { color: var(--text); text-decoration: none; padding: 6px 4px; }
+.nav-menu a:hover { color: var(--accent); }
+.nav-menu > .nav-push { margin-left: auto; }
+.site-nav a:focus-visible, summary:focus-visible, select:focus-visible,
+button:focus-visible, [role="tab"]:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 2px;
+}
+
+/* Code blocks */
+.code { position: relative; margin: 10px 0 16px; }
+.code pre {
+    margin: 0;
+    background: var(--code-bg);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    overflow-x: auto;
+    max-width: 100%;
+}
+.code pre code { background: none; padding: 0; font-size: 0.88rem; white-space: pre; }
+.copy-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: var(--accent);
+    color: var(--text);
+    border: 0;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font: inherit;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+.copy-btn:hover { background: var(--link-hover); }
+
+/* Suite select */
+.suite-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+select {
+    background: var(--code-bg);
+    color: var(--text);
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    padding: 8px 10px;
+    font: inherit;
+    max-width: 100%;
+}
+
+/* Tabs (JS adds .js to <html> and builds the tablist) */
+.tabpanel { margin: 24px 0; }
+.tabpanel > h3 { margin-top: 0; }
+.js .tabpanel { background: var(--panel); border-radius: 0 0 var(--radius) var(--radius); padding: 8px 24px 20px; margin: 0; }
+.js .tabpanel > h3 { display: none; }
+.js .tabpanel[hidden] { display: none; }
+.tablist { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 12px; }
+.tablist [role="tab"] {
+    background: var(--panel-dark);
+    color: var(--text);
+    border: 0;
+    border-radius: var(--radius) var(--radius) 0 0;
+    padding: 10px 18px;
+    font: inherit;
+    cursor: pointer;
+}
+.tablist [role="tab"]:hover { background: #34495e; }
+.tablist [role="tab"][aria-selected="true"] { background: var(--panel); box-shadow: inset 0 3px 0 var(--accent); }
+
+/* Table */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: var(--panel); border-radius: var(--radius); }
+th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid rgba(255, 255, 255, 0.12); }
+th { background: var(--panel-dark); }
+.badge {
+    display: inline-block;
+    background: var(--accent);
+    border-radius: 4px;
+    padding: 0 8px;
+    margin-right: 4px;
+    font-size: 0.8rem;
+}
+
+details.panel summary { cursor: pointer; font-weight: bold; }
+details.panel[open] summary { margin-bottom: 10px; }
+
+/* Footer, same look as lan.party */
+footer { background: var(--panel); padding: 20px 0; flex-shrink: 0; }
+.footer-content { width: 90%; max-width: 1200px; margin: 0 auto; text-align: center; }
+.footer-nav { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 8px; }
+.footer-content p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+
+@media (max-width: 600px) {
+    .container, .site-nav, .footer-content { width: auto; margin-left: 16px; margin-right: 16px; }
+    .panel { padding: 16px; }
+    .js .tabpanel { padding: 8px 16px 16px; }
+    .nav-menu > .nav-push { margin-left: 0; }
+    .tablist [role="tab"] { flex: 1 1 auto; padding: 10px 12px; border-radius: var(--radius); }
+    .fingerprint code { font-size: 0.85rem; }
+    h1 { font-size: 1.6rem; }
+}
+
+.code pre { padding-right: 70px; }
+td code { white-space: nowrap; }
+@media (max-width: 600px) {
+    .site-nav { gap: 8px 16px; }
+    .nav-menu { gap: 4px 14px; }
+    .nav-menu > .nav-push { margin-left: auto; }
+}

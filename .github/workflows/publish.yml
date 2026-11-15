@@ -1,0 +1,260 @@
+name: publish
+
+on:
+  repository_dispatch:
+    types: [tool-released, tool-deleted]
+  schedule:
+    - cron: "17 */6 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - "scripts/render_site.py"
+      - "scripts/assemble.py"
+      - "distros.toml"
+  workflow_dispatch:
+    inputs:
+      full_rebuild:
+        description: "Rebuild and re-upload everything (ignores index/)"
+        type: boolean
+        default: false
+      dry_run:
+        description: "Build and verify only, do not deploy"
+        type: boolean
+        default: false
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+env:
+  REPO_BASE_URL: ${{ vars.REPO_BASE_URL || 'https://repo.lan.party' }}
+  FULL_REBUILD: ${{ github.event.inputs.full_rebuild == 'true' && 'true' || 'false' }}
+  DRY_RUN: ${{ github.event.inputs.dry_run == 'true' && 'true' || 'false' }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.gate.outputs.run }}
+      add: ${{ steps.plan.outputs.add }}
+      replace: ${{ steps.plan.outputs.replace }}
+      remove: ${{ steps.plan.outputs.remove }}
+      pre_verify: ${{ steps.flags.outputs.pre_verify }}
+      can_deploy: ${{ steps.flags.outputs.can_deploy }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq apt-utils createrepo-c rpm lftp zstd
+
+      - name: Plan
+        id: plan
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          args=()
+          if [ "$FULL_REBUILD" = true ]; then args+=(--full-rebuild); fi
+          python3 -I scripts/sync.py plan "${args[@]}"
+
+      - name: Gate
+        id: gate
+        env:
+          CHANGED: ${{ steps.plan.outputs.changed }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          # Packages changed, or site/config pushed, or manual run -> rebuild metadata + landing page
+          if [ "$CHANGED" = true ] || [ "$EVENT" = push ] || [ "$EVENT" = workflow_dispatch ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Nothing to do
+        if: steps.gate.outputs.run != 'true'
+        run: |
+          echo "Nothing to do - index/ matches the GitHub releases." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Download packages
+        if: steps.gate.outputs.run == 'true'
+        run: python3 -I scripts/sync.py download work/plan.json
+
+      - name: Sign packages
+        if: steps.gate.outputs.run == 'true'
+        env:
+          REPO_GPG_PRIVATE_KEY: ${{ secrets.REPO_GPG_PRIVATE_KEY }}
+          REPO_GPG_PASSPHRASE: ${{ secrets.REPO_GPG_PASSPHRASE }}
+          APK_SIGNING_KEY: ${{ secrets.APK_SIGNING_KEY }}
+        run: scripts/sign-packages.sh work/dl
+
+      - name: Fragments
+        if: steps.gate.outputs.run == 'true'
+        run: python3 -I scripts/fragment.py work/plan.json
+
+      - name: Assemble metadata
+        if: steps.gate.outputs.run == 'true'
+        run: python3 -I scripts/assemble.py --out public
+
+      - name: Sign metadata
+        if: steps.gate.outputs.run == 'true'
+        env:
+          REPO_GPG_PRIVATE_KEY: ${{ secrets.REPO_GPG_PRIVATE_KEY }}
+          REPO_GPG_PASSPHRASE: ${{ secrets.REPO_GPG_PASSPHRASE }}
+          APK_SIGNING_KEY: ${{ secrets.APK_SIGNING_KEY }}
+        run: scripts/sign-metadata.sh public
+
+      - name: Render site
+        if: steps.gate.outputs.run == 'true'
+        run: python3 -I scripts/render_site.py --out public
+
+      - name: Decide on verify/deploy
+        id: flags
+        if: steps.gate.outputs.run == 'true'
+        env:
+          S_GPG: ${{ secrets.REPO_GPG_PRIVATE_KEY }}
+          S_APK: ${{ secrets.APK_SIGNING_KEY }}
+          S_FTP_HOST: ${{ secrets.FTP_HOST }}
+          S_FTP_USER: ${{ secrets.FTP_USER }}
+          S_FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          S_FTP_PATH: ${{ secrets.FTP_PATH }}
+        run: |
+          if [ "$FULL_REBUILD" = true ] || [ "$DRY_RUN" = true ]; then
+            echo "pre_verify=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "pre_verify=false" >> "$GITHUB_OUTPUT"
+          fi
+          can=true
+          for v in S_GPG S_APK S_FTP_HOST S_FTP_USER S_FTP_PASSWORD S_FTP_PATH; do
+            [ -n "${!v}" ] || can=false
+          done
+          [ ! -e work/.dry-run-key ] || can=false
+          [ "$DRY_RUN" != true ] || can=false
+          echo "can_deploy=$can" >> "$GITHUB_OUTPUT"
+          if [ "$can" != true ]; then
+            echo ":information_source: Deploy skipped (dry run, throwaway key or missing secrets)." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload public/ (for pre-deploy verify and deploy)
+        if: steps.gate.outputs.run == 'true'
+        uses: actions/upload-artifact@v7
+        with:
+          name: public
+          path: public/
+          retention-days: 3
+          include-hidden-files: true
+
+      - name: Upload metadata only (small, for debugging)
+        if: steps.gate.outputs.run == 'true'
+        uses: actions/upload-artifact@v7
+        with:
+          name: metadata
+          path: |
+            public/
+            !public/**/*.deb
+            !public/**/*.rpm
+            !public/**/*.pkg.tar.zst
+            !public/**/*.apk
+          retention-days: 7
+          include-hidden-files: true
+
+      - name: Upload new index/
+        if: steps.gate.outputs.run == 'true'
+        uses: actions/upload-artifact@v7
+        with:
+          name: index
+          path: index/
+          retention-days: 3
+          if-no-files-found: ignore
+
+  verify-pre:
+    needs: build
+    if: needs.build.outputs.changed == 'true' && needs.build.outputs.pre_verify == 'true'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        image: ["debian:12", "debian:13", "ubuntu:24.04", "ubuntu:26.04", "fedora:44", "rockylinux:9", "archlinux", "alpine:3.21"]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/download-artifact@v8
+        with:
+          name: public
+          path: public
+      - uses: actions/download-artifact@v8
+        with:
+          name: index
+          path: index
+      - name: Serve public/
+        run: |
+          python3 -m http.server 8080 -d public >/dev/null 2>&1 &
+          sleep 2
+          curl -fsS http://127.0.0.1:8080/lan-party.asc >/dev/null
+      - name: Verify ${{ matrix.image }}
+        run: scripts/verify.sh http://127.0.0.1:8080 "${{ matrix.image }}"
+
+  deploy:
+    needs: [build, verify-pre]
+    if: >-
+      !cancelled() && needs.build.result == 'success'
+      && needs.build.outputs.changed == 'true'
+      && needs.build.outputs.can_deploy == 'true'
+      && (needs.verify-pre.result == 'success' || needs.verify-pre.result == 'skipped')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install lftp
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq lftp
+      - uses: actions/download-artifact@v8
+        with:
+          name: public
+          path: public
+      - uses: actions/download-artifact@v8
+        with:
+          name: index
+          path: index-new
+      - name: Deploy
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_PATH: ${{ secrets.FTP_PATH }}
+        run: scripts/deploy.sh public
+      - name: Commit index/
+        run: |
+          rm -rf index
+          mv index-new index
+          touch index/.gitkeep
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A index
+          if git diff --cached --quiet; then
+            echo "index/ unchanged"
+            exit 0
+          fi
+          git commit -m "index: +${{ needs.build.outputs.add }} ~${{ needs.build.outputs.replace }} -${{ needs.build.outputs.remove }}"
+          git pull --rebase
+          git push
+
+  verify-post:
+    needs: [build, deploy]
+    if: needs.deploy.result == 'success'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        image: ["debian:12", "debian:13", "ubuntu:24.04", "ubuntu:26.04", "fedora:44", "rockylinux:9", "archlinux", "alpine:3.21"]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/download-artifact@v8
+        with:
+          name: index
+          path: index
+      - name: Verify ${{ matrix.image }} against ${{ env.REPO_BASE_URL }}
+        run: scripts/verify.sh "$REPO_BASE_URL" "${{ matrix.image }}"
