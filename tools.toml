@@ -57,3 +57,14 @@ deb      = '^discord-gameserver-notifier_.+_all\.deb$'
 rpm      = '^discord-gameserver-notifier-.+\.noarch\.rpm$'
 arch     = '^discord-gameserver-notifier-.+-any\.pkg\.tar\.zst$'
 # kein apk
+
+[[tool]]
+name     = "lanventory"
+repo     = "lan-dot-party/LANventory"
+homepage = "https://github.com/lan-dot-party/LANventory"
+tag      = '^v\d+\.\d+\.\d+$'
+build    = "generic"
+deb      = '^lanventory_.+_(amd64|arm64|armv7)\.deb$'
+rpm      = '^lanventory_.+_(amd64|arm64|armv7)\.rpm$'
+arch     = '^lanventory_.+_(amd64|arm64|armv7)\.pkg\.tar\.zst$'
+apk      = '^lanventory_.+_(amd64|arm64|armv7)\.apk$'
