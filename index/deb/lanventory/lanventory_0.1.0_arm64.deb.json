@@ -1,0 +1,25 @@
+{
+  "arch": "arm64",
+  "asset": "lanventory_0.1.0_arm64.deb",
+  "fmt": "deb",
+  "fragment": {
+    "stanza": "Package: lanventory\nArchitecture: arm64\nVersion: 0.1.0\nPriority: optional\nSection: net\nMaintainer: LAN.party <gamie@lan.party>\nInstalled-Size: 17550\nDepends: ca-certificates\nFilename: pool/lanventory/lanventory_0.1.0_arm64.deb\nSize: 7460990\nMD5sum: b6a582bdff29dd540418cd42ed807a4d\nSHA1: aa4911809fa9ede79b443cc9c5060cebba45098d\nSHA256: 771891088a7fb8592693909ba01e0e32d3c511f592d6cc98a9c37496f9710fa9\nSHA512: 2e461f13158744d379b6fcde99154c63b3ff6c2850b1844db30211b8c5e68885c73725733793d4f4523b224f6e88e2492fdf2c8a54e0ed27d8e2ce32c4858344\nHomepage: https://github.com/lan-dot-party/lanventory\nDescription: Inventory system for LAN parties.\n LANventory tracks assets with inventory numbers, categories and\n configurable fields, and the DGUV V3 electrical inspections of equipment."
+  },
+  "pkgname": "lanventory",
+  "pool_paths": [
+    "deb/pool/lanventory/lanventory_0.1.0_arm64.deb"
+  ],
+  "sha256": "771891088a7fb8592693909ba01e0e32d3c511f592d6cc98a9c37496f9710fa9",
+  "size": 7460990,
+  "tag": "v0.1.0",
+  "targets": [
+    "bookworm",
+    "trixie",
+    "noble",
+    "resolute",
+    "stable"
+  ],
+  "tool": "lanventory",
+  "upstream_sha256": "771891088a7fb8592693909ba01e0e32d3c511f592d6cc98a9c37496f9710fa9",
+  "version": "0.1.0"
+}

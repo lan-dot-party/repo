@@ -1,0 +1,23 @@
+{
+  "arch": "x86_64",
+  "asset": "lanventory_0.1.0_amd64.pkg.tar.zst",
+  "fmt": "arch",
+  "fragment": {
+    "desc": "%FILENAME%\nlanventory_0.1.0_amd64.pkg.tar.zst\n\n%NAME%\nlanventory\n\n%BASE%\nlanventory\n\n%VERSION%\n0.1.0-1\n\n%DESC%\nInventory system for LAN parties. LANventory tracks assets with inventory numbers, categories and configurable fields, and the DGUV V3 electrical inspections of equipment.\n\n%CSIZE%\n8321566\n\n%ISIZE%\n19216877\n\n%MD5SUM%\nbd3c8dc830b71fd0134088b55648d8a6\n\n%SHA256SUM%\ncfa1097274d1b442c7a873d91d39766733ffb6426ac4c07801e478a64114c3a2\n\n%PGPSIG%\niQIzBAABCAAdFiEEvE9/LFqnEo4b+hBc9H8/gamISgUFAmr7FRUACgkQ9H8/gamISgWJ3w/9EnquLxkgCNZwMw1SAORbk3gl87TN3ZNRW44dCbmMVMXJP5P3P1Fjri+Xrg4+7jEGq3dr2/M6NI7QKeVmR+lwsn1hR6Ybr164Bf/E8Iey/eVrTC6Vf7BAivW/rGTD6bvnXETeUODZ/bxsJkKC7VnfOS37ESNq3lQOwJPBV2jnt1d7JPLH0j7QIYa7TP/ooV0ektOmtfMMutK/XwFlrO/9bJXeqV9xdFnkdJcURfjQtl35QHzRWSwrArVgIk2eC5juH4Ep9251YLfMZbJpAymAphrCb0lbZOsX3aGKEiba0MbtVZmVcpIyYrBLgjkcF96E/ZhqyKBt3X0btX7fQswSsnb3t4oyWjjdjOluk1It0WSTpc/hBY2xNC4Y+Sgq27P9THYaFozVT8pNH/A0QWfYT0fOlW+/gk/q7Kk+LGWEAGto/oeum6pSReAF+85HiZG+FQVFt+8yyvsiPQ7qWN0UyrkFWKvfDZStrG07MNOjLRWepiVcMOKfUZA/lB20zpt+Pra2Mxe37GXsEQsGahi5VqNJJAedRse2gqqk6ClCxnhGZ1fkEH5lQJSOGbk/uFKLHAW/zz3UjGsLTFATNMWk1ha1iqMpQKASfXY6wAV+BohOc8WIs/aKCAxHmmjDnu5gHsz//JSV60crNgdKTZYJJ6aYiaS0dxmfHIXegT7pRMg=\n\n%URL%\nhttps://github.com/lan-dot-party/lanventory\n\n%LICENSE%\nMIT\n\n%ARCH%\nx86_64\n\n%BUILDDATE%\n1794839443\n\n%PACKAGER%\nlan-dot-party\n\n%DEPENDS%\nca-certificates\n\n%BACKUP%\netc/lanventory/config.yaml\n\n",
+    "files": "%FILES%\netc/\netc/lanventory/\netc/lanventory/config.yaml\nusr/\nusr/bin/\nusr/bin/lanventory\nusr/lib/\nusr/lib/systemd/\nusr/lib/systemd/system/\nusr/lib/systemd/system/lanventory.service\nusr/lib/sysusers.d/\nusr/lib/sysusers.d/lanventory.conf\nusr/share/\nusr/share/doc/\nusr/share/doc/lanventory/\nusr/share/doc/lanventory/README.md\nusr/share/doc/lanventory/config.example.yaml\nusr/share/doc/lanventory/reverse-proxy.md\nusr/share/licenses/\nusr/share/licenses/lanventory/\nusr/share/licenses/lanventory/LICENSE\n",
+    "name": "lanventory",
+    "pkgver": "0.1.0-1"
+  },
+  "pkgname": "lanventory",
+  "pool_paths": [
+    "arch/x86_64/lanventory_0.1.0_amd64.pkg.tar.zst",
+    "arch/x86_64/lanventory_0.1.0_amd64.pkg.tar.zst.sig"
+  ],
+  "sha256": "cfa1097274d1b442c7a873d91d39766733ffb6426ac4c07801e478a64114c3a2",
+  "size": 8321566,
+  "tag": "v0.1.0",
+  "targets": [],
+  "tool": "lanventory",
+  "upstream_sha256": "cfa1097274d1b442c7a873d91d39766733ffb6426ac4c07801e478a64114c3a2",
+  "version": "0.1.0-1"
+}
