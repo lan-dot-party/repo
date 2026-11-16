@@ -47,6 +47,10 @@ jobs:
       can_deploy: ${{ steps.flags.outputs.can_deploy }}
     steps:
       - uses: actions/checkout@v7
+        with:
+          # newest main, not the SHA from when this run was queued: a run that waited
+          # in the concurrency queue must see the index/ committed by the previous run
+          ref: ${{ github.event.repository.default_branch }}
 
       - name: Install tools
         run: |
@@ -181,6 +185,10 @@ jobs:
         image: ["debian:12", "debian:13", "ubuntu:24.04", "ubuntu:26.04", "fedora:44", "rockylinux:9", "archlinux", "alpine:3.21"]
     steps:
       - uses: actions/checkout@v7
+        with:
+          # newest main, not the SHA from when this run was queued: a run that waited
+          # in the concurrency queue must see the index/ committed by the previous run
+          ref: ${{ github.event.repository.default_branch }}
       - uses: actions/download-artifact@v8
         with:
           name: public
@@ -207,6 +215,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          # newest main, not the SHA from when this run was queued: a run that waited
+          # in the concurrency queue must see the index/ committed by the previous run
+          ref: ${{ github.event.repository.default_branch }}
       - name: Install lftp
         run: |
           sudo apt-get update -qq
@@ -253,6 +265,10 @@ jobs:
         image: ["debian:12", "debian:13", "ubuntu:24.04", "ubuntu:26.04", "fedora:44", "rockylinux:9", "archlinux", "alpine:3.21"]
     steps:
       - uses: actions/checkout@v7
+        with:
+          # newest main, not the SHA from when this run was queued: a run that waited
+          # in the concurrency queue must see the index/ committed by the previous run
+          ref: ${{ github.event.repository.default_branch }}
       - uses: actions/download-artifact@v8
         with:
           name: index
