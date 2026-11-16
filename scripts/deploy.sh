@@ -49,7 +49,7 @@ PY
   echo "set ssl:verify-certificate yes"
   echo "set net:max-retries 5"
   echo "set net:timeout 30"
-  echo "open -u \"$FTP_USER\" \"ftp://$FTP_HOST\""
+  echo "open --env-password -u \"$FTP_USER\" \"ftp://$FTP_HOST\""
   echo "cd \"$FTP_PATH\""
   for l in upload meta; do
     # create directories first
