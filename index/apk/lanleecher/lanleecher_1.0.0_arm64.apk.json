@@ -1,0 +1,20 @@
+{
+  "arch": "aarch64",
+  "asset": "lanleecher_1.0.0_arm64.apk",
+  "fmt": "apk",
+  "fragment": {
+    "filename": "lanleecher-1.0.0.apk",
+    "stanza": "C:Q1oAwLksNLXRO57r4/2WfOijAMRaE=\nP:lanleecher\nV:1.0.0\nA:aarch64\nS:6817898\nI:15609706\nT:Traffic rankings per client for LAN parties.\nU:https://github.com/lan-dot-party/LANLeecher\nL:MIT\nm:lan-dot-party"
+  },
+  "pkgname": "lanleecher",
+  "pool_paths": [
+    "alpine/main/aarch64/lanleecher-1.0.0.apk"
+  ],
+  "sha256": "6cab83f2b463b0dbc4e783765b9261f4a003655cbd34da7c44ec71ad26778827",
+  "size": 6817898,
+  "tag": "v1.0.0",
+  "targets": [],
+  "tool": "lanleecher",
+  "upstream_sha256": "6cab83f2b463b0dbc4e783765b9261f4a003655cbd34da7c44ec71ad26778827",
+  "version": "1.0.0"
+}

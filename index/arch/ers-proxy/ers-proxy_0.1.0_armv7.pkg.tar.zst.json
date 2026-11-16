@@ -1,0 +1,23 @@
+{
+  "arch": "armv7h",
+  "asset": "ers-proxy_0.1.0_armv7.pkg.tar.zst",
+  "fmt": "arch",
+  "fragment": {
+    "desc": "%FILENAME%\ners-proxy_0.1.0_armv7.pkg.tar.zst\n\n%NAME%\ners-proxy\n\n%BASE%\ners-proxy\n\n%VERSION%\n0.1.0-1\n\n%DESC%\nPortal for the web interfaces of network devices. ERS-Proxy makes the Enterprise Device Manager (EDM) of Avaya/Extreme ERS switches work in modern browsers and opens all devices of a site in tabs of one web UI, with browser isolation and certificate pinning.\n\n%CSIZE%\n6075461\n\n%ISIZE%\n15021024\n\n%MD5SUM%\n004562e20a4138e7f2e9c15ac6438dfd\n\n%SHA256SUM%\ndbf413dbc0cb6fb2cc890a9a64801b6400418556db4354d23865a31c21ff5b60\n\n%PGPSIG%\niQIzBAABCAAdFiEEvE9/LFqnEo4b+hBc9H8/gamISgUFAmr6oH8ACgkQ9H8/gamISgUGZhAAgoY6j4UQtMLFy8wnW8Z+gI9Abcktjekdv6jrPI/N8AzgUI715Lis8yDS4WLFrPY+hGQK1OtECv3MRGqcVmHSXSOfJU9tjC2mxRsLi0WfMEg9ANaxVuNicjBiRipOM69NiBLthjQLS+gJ/Kjcg3CQbo9yQVzH4QiaCzXL4DoHKF++TcU57VbvK5EUZ9eqktmLteXDqtK4/aAfSQNl/7s0eHAVkycAbMK1yY4JGnuZfq/A0ypCOCS7YhzjXro3cVvam0xk0ltDPXQLmCnxJQEuFnBVscvGjW+iqt6suRrFVI9L1rs8ubYgsktmrh0W8dAfESBHcSYvE0VkB2UkSvgQjMwMoTC3469ir1nEubayDokMXqK4FTlEAdJbFMEJfL/lmS/FkI0Z899P5aVU8bVqUnlqWWNUyDkj+JcTMdHkviSETYIXNnk7LLF/cWgYaaWm0z8OWYKoa9FtMMKZtQkpoGouha+v5WLY8PxweT9pOYwnz0YsZ4aSqO0SIVQSzrDYm0hYayPh4O4mbelaAblFOzyXKaIaxStaqvIEv6y754vBAfsTGO4V/A5FKkySC/5YdVka8jDDluIH10Egh7M8MMu8YEBWzFuO4z53U8j+t/N80ZW/Q/wD6sKWA40YJDPvTJH5ZPWm9AbNNpa3EXt59UWU3yQUSYdePV2cka5xs4o=\n\n%URL%\nhttps://github.com/lan-dot-party/ERS-Proxy\n\n%LICENSE%\nMIT\n\n%ARCH%\narmv7h\n\n%BUILDDATE%\n1793732872\n\n%PACKAGER%\nlan-dot-party\n\n%DEPENDS%\nca-certificates\n\n%BACKUP%\netc/ers-proxy/config.yaml\n\n",
+    "files": "%FILES%\netc/\netc/ers-proxy/\netc/ers-proxy/config.yaml\nusr/\nusr/bin/\nusr/bin/ers-proxy\nusr/lib/\nusr/lib/systemd/\nusr/lib/systemd/system/\nusr/lib/systemd/system/ers-proxy.service\nusr/lib/sysusers.d/\nusr/lib/sysusers.d/ers-proxy.conf\nusr/share/\nusr/share/doc/\nusr/share/doc/ers-proxy/\nusr/share/doc/ers-proxy/README.md\nusr/share/doc/ers-proxy/config.example.yaml\nusr/share/doc/ers-proxy/reverse-proxy.md\nusr/share/licenses/\nusr/share/licenses/ers-proxy/\nusr/share/licenses/ers-proxy/LICENSE\n",
+    "name": "ers-proxy",
+    "pkgver": "0.1.0-1"
+  },
+  "pkgname": "ers-proxy",
+  "pool_paths": [
+    "arch/armv7h/ers-proxy_0.1.0_armv7.pkg.tar.zst",
+    "arch/armv7h/ers-proxy_0.1.0_armv7.pkg.tar.zst.sig"
+  ],
+  "sha256": "dbf413dbc0cb6fb2cc890a9a64801b6400418556db4354d23865a31c21ff5b60",
+  "size": 6075461,
+  "tag": "v0.1.0",
+  "targets": [],
+  "tool": "ers-proxy",
+  "upstream_sha256": "dbf413dbc0cb6fb2cc890a9a64801b6400418556db4354d23865a31c21ff5b60",
+  "version": "0.1.0-1"
+}

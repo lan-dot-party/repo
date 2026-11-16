@@ -1,0 +1,21 @@
+{
+  "arch": "amd64",
+  "asset": "lanpilot_1.0.0-1.ubuntu24.04_amd64.deb",
+  "fmt": "deb",
+  "fragment": {
+    "stanza": "Package: lanpilot\nArchitecture: amd64\nVersion: 1.0.0-1~ubuntu24.04\nPriority: optional\nSection: net\nMaintainer: LAN.party <gamie@lan.party>\nInstalled-Size: 103464\nDepends: python3 (>= 3.12), python3 (<< 3.13), systemd, util-linux\nFilename: pool/lanpilot/lanpilot_1.0.0-1.ubuntu24.04_amd64.deb\nSize: 34514412\nMD5sum: 59ac560211c55c559462db4d1f232976\nSHA1: 768074228b3dcb35592a62791678ceb5b1c583e6\nSHA256: fd1e0598cfcabd7c2617bdb3f8a3c4672da26e05b030ab286acecd08ea444c33\nSHA512: 9cc73ab566bb5f9ff2f80585b18a46966e2583d0dd2b0b3222bff35384a30f5aa6e7c1d19e15aa54f3ce6d806ce2f9a7943ca144e13b72bd53ab7770a294c93a\nHomepage: https://github.com/lan-dot-party/LANPilot\nDescription: Web interface for monitoring and remote-controlling game servers\n LANPilot shows every game server of a LAN party on one dashboard and lets\n operators change the map, restart a match and manage players. It talks to the\n servers through their own remote protocols and needs no agent on the game hosts."
+  },
+  "pkgname": "lanpilot",
+  "pool_paths": [
+    "deb/pool/lanpilot/lanpilot_1.0.0-1.ubuntu24.04_amd64.deb"
+  ],
+  "sha256": "fd1e0598cfcabd7c2617bdb3f8a3c4672da26e05b030ab286acecd08ea444c33",
+  "size": 34514412,
+  "tag": "1.0.0",
+  "targets": [
+    "noble"
+  ],
+  "tool": "lanpilot",
+  "upstream_sha256": "fd1e0598cfcabd7c2617bdb3f8a3c4672da26e05b030ab286acecd08ea444c33",
+  "version": "1.0.0-1~ubuntu24.04"
+}

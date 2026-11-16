@@ -1,0 +1,25 @@
+{
+  "arch": "arm64",
+  "asset": "flowgauge_1.1.0_linux_arm64.deb",
+  "fmt": "deb",
+  "fragment": {
+    "stanza": "Package: flowgauge\nArchitecture: arm64\nVersion: 1.1.0\nPriority: optional\nMaintainer: lan-dot-party\nInstalled-Size: 20103\nDepends: ca-certificates\nFilename: pool/flowgauge/flowgauge_1.1.0_linux_arm64.deb\nSize: 7424866\nMD5sum: fa2ee4a34e2626a355c1dfced8a40628\nSHA1: e997e9269df35a17c886d27dc9035f65441b0267\nSHA256: 3f95c1883730bfb5f8148e77f5c7702d6a2f02bbda0289deda44b379b075e4b8\nSHA512: 4abeea619146dd380bd7899162fd9ca04d64f4ae872563748286d1295317676036da4aa6a6f986b36cfca540299051fbc04575ddc82f3160ffdabc8f4bcda7be\nHomepage: https://github.com/lan-dot-party/flowgauge\nDescription: FlowGauge - Bandwidth monitoring with Multi-WAN support.\n A modular bandwidth testing tool with DSCP tagging,\n scheduled tests, REST API and Prometheus metrics."
+  },
+  "pkgname": "flowgauge",
+  "pool_paths": [
+    "deb/pool/flowgauge/flowgauge_1.1.0_linux_arm64.deb"
+  ],
+  "sha256": "3f95c1883730bfb5f8148e77f5c7702d6a2f02bbda0289deda44b379b075e4b8",
+  "size": 7424866,
+  "tag": "v1.1.0",
+  "targets": [
+    "bookworm",
+    "trixie",
+    "noble",
+    "resolute",
+    "stable"
+  ],
+  "tool": "flowgauge",
+  "upstream_sha256": "3f95c1883730bfb5f8148e77f5c7702d6a2f02bbda0289deda44b379b075e4b8",
+  "version": "1.1.0"
+}

@@ -1,0 +1,27 @@
+{
+  "arch": "any",
+  "asset": "discord-gameserver-notifier-0.1.0-1-any.pkg.tar.zst",
+  "fmt": "arch",
+  "fragment": {
+    "desc": "%FILENAME%\ndiscord-gameserver-notifier-0.1.0-1-any.pkg.tar.zst\n\n%NAME%\ndiscord-gameserver-notifier\n\n%BASE%\ndiscord-gameserver-notifier\n\n%VERSION%\n0.1.0-1\n\n%DESC%\nAutomated Discord notifications for LAN gameservers\n\n%CSIZE%\n67495\n\n%ISIZE%\n70320\n\n%MD5SUM%\n6677b3bdbce3fe13d066d7877c925533\n\n%SHA256SUM%\ne01d83d1d3640d9a582b4b61a8c3545659c1bf3d43ba29929e8f5fdd7dbe678a\n\n%PGPSIG%\niQIzBAABCAAdFiEEvE9/LFqnEo4b+hBc9H8/gamISgUFAmr6oHwACgkQ9H8/gamISgWSNA//bwTGzHTpRQGiT16UGdaT+ykwFPKU6hUpZlzlI/8Frcl7z0wailvxTtJoSke3v5R0fZ6tsbbvdce1mstj0++m+8uixVQev/M/I4J88QWOuialn0BD3aZNEUhJ5gfMyapq+gAvbnuUrwEVhB0J4FFNZG3t+VsIquoj2NGSWujNGh6ZFs+vekajCUMWM9GjZYDPeLrmX/R95sMnkiTFa5oTZJsBIrpGeoE83Q8NQFvabNzl37wM0S53a/uPv+1RFhvOw1H+gGnKhoCcYtkyTFBFauqdpRLA41zDoyAaeXLi66EHPs0GLlqDSTBuuEwn0Wflal5fBC+fpxJrLshM32YbZIU14jGnceKhkNRtgDf9K3yjdYIc9bKLCmqD9jSOes0dseCfGRehPGbITCpRbq9VNbolUqyTNqTXOZhu21yJWi4Jf1lblHHDXJCm/zBsTCtqwoY+vfL8//9PxEB6U8Sb0lDKC98owjBuY1Fhl6Vs/6rA5FwGnI0eSSKHZi6eIqxK1Yj517kS+BwIzu8/BE9YFRWxndkFgUQpGXoNJx6EJ1e5LJuhtdEiVOwLd4Zr/ptjOw4P+QEuqxRZ3a0Kct6vg/1hvoBb3OD7fGoR/nykh2vQdW1eNsWcF18dYNciRNngi4BvigwhLPCnyYI/F2hG5uiqBR8LxA5Ml4NCRUzVV8w=\n\n%URL%\nhttps://github.com/lan-dot-party/Discord-Gameserver-Notifier\n\n%LICENSE%\nGPL3\n\n%ARCH%\nany\n\n%BUILDDATE%\n1752218988\n\n%PACKAGER%\nUnknown Packager\n\n%DEPENDS%\npython>=3.7\npython-pip\npython-virtualenv\npython-yaml\nsystemd\n\n%MAKEDEPENDS%\npython-build\npython-installer\npython-wheel\npython-hatchling\n\n",
+    "files": "%FILES%\netc/\netc/dgn/\nopt/\nusr/\nusr/bin/\nusr/bin/discord-gameserver-notifier\nusr/lib/\nusr/lib/python3.13/\nusr/lib/python3.13/site-packages/\nusr/lib/python3.13/site-packages/discord_gameserver_notifier-0.1.0-py3-none-any.whl\nusr/lib/systemd/\nusr/lib/systemd/system/\nusr/lib/systemd/system/discord-gameserver-notifier.service\nusr/share/\nusr/share/doc/\nusr/share/doc/discord-gameserver-notifier/\nusr/share/doc/discord-gameserver-notifier/config.yaml.example\nusr/share/doc/discord-gameserver-notifier/config.yaml.service-example\nvar/\nvar/lib/\nvar/lib/dgn/\nvar/log/\nvar/log/dgn/\n",
+    "name": "discord-gameserver-notifier",
+    "pkgver": "0.1.0-1"
+  },
+  "pkgname": "discord-gameserver-notifier",
+  "pool_paths": [
+    "arch/x86_64/discord-gameserver-notifier-0.1.0-1-any.pkg.tar.zst",
+    "arch/x86_64/discord-gameserver-notifier-0.1.0-1-any.pkg.tar.zst.sig",
+    "arch/aarch64/discord-gameserver-notifier-0.1.0-1-any.pkg.tar.zst",
+    "arch/aarch64/discord-gameserver-notifier-0.1.0-1-any.pkg.tar.zst.sig",
+    "arch/armv7h/discord-gameserver-notifier-0.1.0-1-any.pkg.tar.zst",
+    "arch/armv7h/discord-gameserver-notifier-0.1.0-1-any.pkg.tar.zst.sig"
+  ],
+  "sha256": "e01d83d1d3640d9a582b4b61a8c3545659c1bf3d43ba29929e8f5fdd7dbe678a",
+  "size": 67495,
+  "tag": "0.1.0",
+  "targets": [],
+  "tool": "discord-gameserver-notifier",
+  "upstream_sha256": "e01d83d1d3640d9a582b4b61a8c3545659c1bf3d43ba29929e8f5fdd7dbe678a",
+  "version": "0.1.0-1"
+}

@@ -1,0 +1,23 @@
+{
+  "arch": "aarch64",
+  "asset": "lanleecher_1.0.0_arm64.pkg.tar.zst",
+  "fmt": "arch",
+  "fragment": {
+    "desc": "%FILENAME%\nlanleecher_1.0.0_arm64.pkg.tar.zst\n\n%NAME%\nlanleecher\n\n%BASE%\nlanleecher\n\n%VERSION%\n1.0.0-1\n\n%DESC%\nTraffic rankings per client for LAN parties. LANLeecher counts download and upload per MAC address via SNMP from the switches and serves rankings through a web UI, a beamer view and a REST API.\n\n%CSIZE%\n6617589\n\n%ISIZE%\n15609706\n\n%MD5SUM%\naf0f0e58a4951ec778751f78a0af13a5\n\n%SHA256SUM%\n0f18af00435921bc711b1f97f327988f23b821835889ec0d6dfe6d6552f2c7d9\n\n%PGPSIG%\niQIzBAABCAAdFiEEvE9/LFqnEo4b+hBc9H8/gamISgUFAmr6oIEACgkQ9H8/gamISgV72g//SLIfOOwS1xaKAv9sQMUIbe48Vz9sWzhb6e9qtUVjQ45lAkOT2CtMQ55PKp6OqsV6rEP8q8jCVhP5THhkdAWGiGBJoPHw7uKtGeOHqfNnaLjCt8obiUnSkYxWClpEuV0apSAFaNlFzjvaeJXzFuMZUraIKh2JBtoHka7BnN9jL/69VwPEXqwlShaQG3pCkmVVNuFOuEXcugOU7FxDvkyMqRy1N8/GK3xxmTNQ10kFK2IQOJzFonCotq0jsskuODCH2vQ9S8ILyqU2dWtUHZUadqzAL8KdptwNw2z4INQBLRM3h0kmLop38usfbHtsmzNPwA29dpKcGZkXVxqTlSyllF/mkn5lH/FnAk6YsCR6hPK99sfhxfUUlE94eLtD55F2gA2VNEXRcuVSdWuNiD+wSxHcCStH7SzZUgM8fLA1H+Y9bsN2hOFvC2A57+nY3jNdS4s6NMRbfvpaW9Gs7fcZMsCjIrhdF0jAX0HQiij5F+CMfX4J+x6TVjU/lt0X59y4haZspeXzexMuNMecF8aYQ3jCf5/xHzBgj7zYd3nyt/HhSUpKIejJlEgX0/8dWKA3ltc7mEuQ8kt9ChgXM8GQNGzsLF4o2Ecnae6BpO10Ka++iSqVZnC48XpsU3k+aBS6fpTfJzFddBj9jtjjZ59azrmHZ7rSkiULdqYC5UBgOt0=\n\n%URL%\nhttps://github.com/lan-dot-party/LANLeecher\n\n%LICENSE%\nMIT\n\n%ARCH%\naarch64\n\n%BUILDDATE%\n1792682644\n\n%PACKAGER%\nlan-dot-party\n\n%DEPENDS%\nca-certificates\n\n%BACKUP%\netc/lanleecher/config.yaml\n\n",
+    "files": "%FILES%\netc/\netc/lanleecher/\netc/lanleecher/config.yaml\nusr/\nusr/bin/\nusr/bin/lanleecher\nusr/lib/\nusr/lib/systemd/\nusr/lib/systemd/system/\nusr/lib/systemd/system/lanleecher.service\nusr/lib/sysusers.d/\nusr/lib/sysusers.d/lanleecher.conf\nusr/share/\nusr/share/doc/\nusr/share/doc/lanleecher/\nusr/share/doc/lanleecher/README.md\nusr/share/doc/lanleecher/config.example.yaml\nusr/share/licenses/\nusr/share/licenses/lanleecher/\nusr/share/licenses/lanleecher/LICENSE\n",
+    "name": "lanleecher",
+    "pkgver": "1.0.0-1"
+  },
+  "pkgname": "lanleecher",
+  "pool_paths": [
+    "arch/aarch64/lanleecher_1.0.0_arm64.pkg.tar.zst",
+    "arch/aarch64/lanleecher_1.0.0_arm64.pkg.tar.zst.sig"
+  ],
+  "sha256": "0f18af00435921bc711b1f97f327988f23b821835889ec0d6dfe6d6552f2c7d9",
+  "size": 6617589,
+  "tag": "v1.0.0",
+  "targets": [],
+  "tool": "lanleecher",
+  "upstream_sha256": "0f18af00435921bc711b1f97f327988f23b821835889ec0d6dfe6d6552f2c7d9",
+  "version": "1.0.0-1"
+}

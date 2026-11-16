@@ -1,0 +1,25 @@
+{
+  "arch": "armv7hl",
+  "asset": "lanleecher_1.0.0_armv7.rpm",
+  "fmt": "rpm",
+  "fragment": {
+    "filelists": "<package pkgid=\"0033d8add54ccd81af2d8ab711a005dff1590e6e8d7a7eac0f877182f56245f9\" name=\"lanleecher\" arch=\"armv7hl\">\n  <version epoch=\"0\" ver=\"1.0.0\" rel=\"1\"/>\n  <file>/etc/lanleecher/config.yaml</file>\n  <file>/usr/bin/lanleecher</file>\n  <file>/usr/lib/systemd/system/lanleecher.service</file>\n  <file>/usr/lib/sysusers.d/lanleecher.conf</file>\n  <file>/usr/share/doc/lanleecher/README.md</file>\n  <file>/usr/share/doc/lanleecher/config.example.yaml</file>\n  <file>/usr/share/licenses/lanleecher/LICENSE</file>\n</package>",
+    "other": "<package pkgid=\"0033d8add54ccd81af2d8ab711a005dff1590e6e8d7a7eac0f877182f56245f9\" name=\"lanleecher\" arch=\"armv7hl\">\n  <version epoch=\"0\" ver=\"1.0.0\" rel=\"1\"/>\n</package>",
+    "primary": "<package type=\"rpm\">\n  <name>lanleecher</name>\n  <arch>armv7hl</arch>\n  <version epoch=\"0\" ver=\"1.0.0\" rel=\"1\"/>\n  <checksum type=\"sha256\" pkgid=\"YES\">0033d8add54ccd81af2d8ab711a005dff1590e6e8d7a7eac0f877182f56245f9</checksum>\n  <summary>Traffic rankings per client for LAN parties.</summary>\n  <description>Traffic rankings per client for LAN parties.\nLANLeecher counts download and upload per MAC address via SNMP from the\nswitches and serves rankings through a web UI, a beamer view and a REST API.</description>\n  <packager>lan-dot-party</packager>\n  <url>https://github.com/lan-dot-party/LANLeecher</url>\n  <time file=\"1794809975\" build=\"1792682644\"/>\n  <size package=\"6739431\" installed=\"15806314\" archive=\"15806314\"/>\n  <location xml:base=\"https://repo.lan.party/rpm/pool/lanleecher/\" href=\"lanleecher_1.0.0_armv7.rpm\"/>\n  <format>\n    <rpm:license>MIT</rpm:license>\n    <rpm:vendor>lan-dot-party</rpm:vendor>\n    <rpm:group></rpm:group>\n    <rpm:buildhost>runnervmfese6</rpm:buildhost>\n    <rpm:sourcerpm>lanleecher-1.0.0-1.src.rpm</rpm:sourcerpm>\n    <rpm:header-range start=\"848\" end=\"6432\"/>\n    <rpm:provides>\n      <rpm:entry name=\"lanleecher\" flags=\"EQ\" epoch=\"0\" ver=\"1.0.0\" rel=\"1\"/>\n    </rpm:provides>\n    <rpm:requires>\n      <rpm:entry name=\"ca-certificates\"/>\n    </rpm:requires>\n    <file>/etc/lanleecher/config.yaml</file>\n    <file>/usr/bin/lanleecher</file>\n  </format>\n</package>"
+  },
+  "pkgname": "lanleecher",
+  "pool_paths": [
+    "rpm/pool/lanleecher/lanleecher_1.0.0_armv7.rpm"
+  ],
+  "sha256": "0033d8add54ccd81af2d8ab711a005dff1590e6e8d7a7eac0f877182f56245f9",
+  "size": 6739431,
+  "tag": "v1.0.0",
+  "targets": [
+    "el/9",
+    "fedora/44",
+    "generic"
+  ],
+  "tool": "lanleecher",
+  "upstream_sha256": "4c841f00bd68c784700a073dc0df8c2a3f4a13287f58bcabed12694765ff7f9c",
+  "version": "1.0.0-1"
+}

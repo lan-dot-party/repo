@@ -1,0 +1,25 @@
+{
+  "arch": "all",
+  "asset": "discord-gameserver-notifier_0.4.0_all.deb",
+  "fmt": "deb",
+  "fragment": {
+    "stanza": "Package: discord-gameserver-notifier\nArchitecture: all\nVersion: 0.4.0\nPriority: optional\nSection: default\nMaintainer: LAN.party Team <packaging@lan.party>\nInstalled-Size: 762\nDepends: python3 (>= 3.8), python3-pip, python3-venv\nFilename: pool/discord-gameserver-notifier/discord-gameserver-notifier_0.4.0_all.deb\nSize: 267678\nMD5sum: 11d26b610acb3a841c93ad83e30a4395\nSHA1: 4db30d5a835eafc66b46a4c902614ee0b348c2b2\nSHA256: 1adacd8bbae2c07954c3794db3407183cd0d09c00153fb6ca6c35f6678ecd98d\nSHA512: abcc980c9e8cbc1aa0c1391960943e417d5b47b0e0df705ca055289805608304b1896b0e94ed906050a4462f53fea848938465539252647c8a291fe79d290bea\nHomepage: https://github.com/lan-dot-party/Discord-Gameserver-Notifier\nDescription: Automated Discord notifications for LAN gameservers\nLicense: GPL-3.0\nVendor: none"
+  },
+  "pkgname": "discord-gameserver-notifier",
+  "pool_paths": [
+    "deb/pool/discord-gameserver-notifier/discord-gameserver-notifier_0.4.0_all.deb"
+  ],
+  "sha256": "1adacd8bbae2c07954c3794db3407183cd0d09c00153fb6ca6c35f6678ecd98d",
+  "size": 267678,
+  "tag": "0.4.0",
+  "targets": [
+    "bookworm",
+    "trixie",
+    "noble",
+    "resolute",
+    "stable"
+  ],
+  "tool": "discord-gameserver-notifier",
+  "upstream_sha256": "1adacd8bbae2c07954c3794db3407183cd0d09c00153fb6ca6c35f6678ecd98d",
+  "version": "0.4.0"
+}

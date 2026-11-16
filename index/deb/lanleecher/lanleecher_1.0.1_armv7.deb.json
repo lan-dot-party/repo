@@ -1,0 +1,25 @@
+{
+  "arch": "armhf",
+  "asset": "lanleecher_1.0.1_armv7.deb",
+  "fmt": "deb",
+  "fragment": {
+    "stanza": "Package: lanleecher\nArchitecture: armhf\nVersion: 1.0.1\nPriority: optional\nSection: net\nMaintainer: lan-dot-party\nInstalled-Size: 15499\nDepends: ca-certificates\nFilename: pool/lanleecher/lanleecher_1.0.1_armv7.deb\nSize: 6742806\nMD5sum: bd44d5e9ec56b2bbb8fec7ed2ca38bac\nSHA1: ad4347cd1c0adb37928dba961f90d06f628b9d44\nSHA256: 25cbd22ba2e04b980fe8a86be09cf588be23277b74588afb7fa87c10b8ee9da4\nSHA512: 31f8df7518fc92d85d115967250a4324cd37e0bff2538c0c56657bf254c944759aa862f2c3b84f13f1ce0cfce9ee489244c921fac758ac9bb992e0e9a49a45f7\nHomepage: https://github.com/lan-dot-party/LANLeecher\nDescription: Traffic rankings per client for LAN parties.\n LANLeecher counts download and upload per MAC address via SNMP from the\n switches and serves rankings through a web UI, a beamer view and a REST API."
+  },
+  "pkgname": "lanleecher",
+  "pool_paths": [
+    "deb/pool/lanleecher/lanleecher_1.0.1_armv7.deb"
+  ],
+  "sha256": "25cbd22ba2e04b980fe8a86be09cf588be23277b74588afb7fa87c10b8ee9da4",
+  "size": 6742806,
+  "tag": "v1.0.1",
+  "targets": [
+    "bookworm",
+    "trixie",
+    "noble",
+    "resolute",
+    "stable"
+  ],
+  "tool": "lanleecher",
+  "upstream_sha256": "25cbd22ba2e04b980fe8a86be09cf588be23277b74588afb7fa87c10b8ee9da4",
+  "version": "1.0.1"
+}

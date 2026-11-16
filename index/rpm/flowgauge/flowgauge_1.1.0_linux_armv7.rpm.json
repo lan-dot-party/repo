@@ -1,0 +1,25 @@
+{
+  "arch": "armv7hl",
+  "asset": "flowgauge_1.1.0_linux_armv7.rpm",
+  "fmt": "rpm",
+  "fragment": {
+    "filelists": "<package pkgid=\"5f31911351abf859158fe8f421c79af13aae1d88fa12270279b6f8dcd5a5e499\" name=\"flowgauge\" arch=\"armv7hl\">\n  <version epoch=\"0\" ver=\"1.1.0\" rel=\"1\"/>\n  <file>/etc/flowgauge/config.yaml.example</file>\n  <file>/lib/systemd/system/flowgauge.service</file>\n  <file>/usr/bin/flowgauge</file>\n</package>",
+    "other": "<package pkgid=\"5f31911351abf859158fe8f421c79af13aae1d88fa12270279b6f8dcd5a5e499\" name=\"flowgauge\" arch=\"armv7hl\">\n  <version epoch=\"0\" ver=\"1.1.0\" rel=\"1\"/>\n</package>",
+    "primary": "<package type=\"rpm\">\n  <name>flowgauge</name>\n  <arch>armv7hl</arch>\n  <version epoch=\"0\" ver=\"1.1.0\" rel=\"1\"/>\n  <checksum type=\"sha256\" pkgid=\"YES\">5f31911351abf859158fe8f421c79af13aae1d88fa12270279b6f8dcd5a5e499</checksum>\n  <summary>FlowGauge - Bandwidth monitoring with Multi-WAN support.</summary>\n  <description>FlowGauge - Bandwidth monitoring with Multi-WAN support.\nA modular bandwidth testing tool with DSCP tagging,\nscheduled tests, REST API and Prometheus metrics.\n</description>\n  <packager>lan-dot-party</packager>\n  <url>https://github.com/lan-dot-party/flowgauge</url>\n  <time file=\"1794809974\" build=\"1789990957\"/>\n  <size package=\"7592041\" installed=\"20520532\" archive=\"20520532\"/>\n  <location xml:base=\"https://repo.lan.party/rpm/pool/flowgauge/\" href=\"flowgauge_1.1.0_linux_armv7.rpm\"/>\n  <format>\n    <rpm:license>MIT</rpm:license>\n    <rpm:vendor>lan-dot-party</rpm:vendor>\n    <rpm:group></rpm:group>\n    <rpm:buildhost>runnervmlun5p</rpm:buildhost>\n    <rpm:sourcerpm>flowgauge-1.1.0-1.src.rpm</rpm:sourcerpm>\n    <rpm:header-range start=\"848\" end=\"4772\"/>\n    <rpm:provides>\n      <rpm:entry name=\"flowgauge\" flags=\"EQ\" epoch=\"0\" ver=\"1.1.0\" rel=\"1\"/>\n    </rpm:provides>\n    <rpm:requires>\n      <rpm:entry name=\"ca-certificates\"/>\n    </rpm:requires>\n    <file>/etc/flowgauge/config.yaml.example</file>\n    <file>/usr/bin/flowgauge</file>\n  </format>\n</package>"
+  },
+  "pkgname": "flowgauge",
+  "pool_paths": [
+    "rpm/pool/flowgauge/flowgauge_1.1.0_linux_armv7.rpm"
+  ],
+  "sha256": "5f31911351abf859158fe8f421c79af13aae1d88fa12270279b6f8dcd5a5e499",
+  "size": 7592041,
+  "tag": "v1.1.0",
+  "targets": [
+    "el/9",
+    "fedora/44",
+    "generic"
+  ],
+  "tool": "flowgauge",
+  "upstream_sha256": "c8fe11ca81d38ff7ab9130f62e1f4b18aa5ed25696446858452b862709a3b9ab",
+  "version": "1.1.0-1"
+}

@@ -1,0 +1,25 @@
+{
+  "arch": "armv7hl",
+  "asset": "ers-proxy_1.0.0_armv7.rpm",
+  "fmt": "rpm",
+  "fragment": {
+    "filelists": "<package pkgid=\"7c08d5b33f9286d8a11b8db44c0d686663d4a3888922a274bdc356da5661e20a\" name=\"ers-proxy\" arch=\"armv7hl\">\n  <version epoch=\"0\" ver=\"1.0.0\" rel=\"1\"/>\n  <file>/etc/ers-proxy/config.yaml</file>\n  <file>/usr/bin/ers-proxy</file>\n  <file>/usr/lib/systemd/system/ers-proxy.service</file>\n  <file>/usr/lib/sysusers.d/ers-proxy.conf</file>\n  <file>/usr/share/doc/ers-proxy/README.md</file>\n  <file>/usr/share/doc/ers-proxy/config.example.yaml</file>\n  <file>/usr/share/doc/ers-proxy/reverse-proxy.md</file>\n  <file>/usr/share/licenses/ers-proxy/LICENSE</file>\n</package>",
+    "other": "<package pkgid=\"7c08d5b33f9286d8a11b8db44c0d686663d4a3888922a274bdc356da5661e20a\" name=\"ers-proxy\" arch=\"armv7hl\">\n  <version epoch=\"0\" ver=\"1.0.0\" rel=\"1\"/>\n</package>",
+    "primary": "<package type=\"rpm\">\n  <name>ers-proxy</name>\n  <arch>armv7hl</arch>\n  <version epoch=\"0\" ver=\"1.0.0\" rel=\"1\"/>\n  <checksum type=\"sha256\" pkgid=\"YES\">7c08d5b33f9286d8a11b8db44c0d686663d4a3888922a274bdc356da5661e20a</checksum>\n  <summary>Portal for the web interfaces of network devices.</summary>\n  <description>Portal for the web interfaces of network devices.\nERS-Proxy makes the Enterprise Device Manager (EDM) of Avaya/Extreme ERS\nswitches work in modern browsers and opens all devices of a site in tabs\nof one web UI, with browser isolation and certificate pinning.</description>\n  <packager>LAN.party &lt;gamie@lan.party&gt;</packager>\n  <url>https://github.com/lan-dot-party/ERS-Proxy</url>\n  <time file=\"1794809972\" build=\"1793797754\"/>\n  <size package=\"6307504\" installed=\"15152096\" archive=\"15153424\"/>\n  <location xml:base=\"https://repo.lan.party/rpm/pool/ers-proxy/\" href=\"ers-proxy_1.0.0_armv7.rpm\"/>\n  <format>\n    <rpm:license>MIT</rpm:license>\n    <rpm:vendor>lan-dot-party</rpm:vendor>\n    <rpm:group></rpm:group>\n    <rpm:buildhost>runnervm7aw5e</rpm:buildhost>\n    <rpm:sourcerpm>ers-proxy-1.0.0-1.src.rpm</rpm:sourcerpm>\n    <rpm:header-range start=\"936\" end=\"6968\"/>\n    <rpm:provides>\n      <rpm:entry name=\"ers-proxy\" flags=\"EQ\" epoch=\"0\" ver=\"1.0.0\" rel=\"1\"/>\n      <rpm:entry name=\"ers-proxy(armv7hl-32)\" flags=\"EQ\" epoch=\"0\" ver=\"1.0.0\" rel=\"1\"/>\n    </rpm:provides>\n    <rpm:requires>\n      <rpm:entry name=\"ca-certificates\"/>\n    </rpm:requires>\n    <file>/etc/ers-proxy/config.yaml</file>\n    <file>/usr/bin/ers-proxy</file>\n  </format>\n</package>"
+  },
+  "pkgname": "ers-proxy",
+  "pool_paths": [
+    "rpm/pool/ers-proxy/ers-proxy_1.0.0_armv7.rpm"
+  ],
+  "sha256": "7c08d5b33f9286d8a11b8db44c0d686663d4a3888922a274bdc356da5661e20a",
+  "size": 6307504,
+  "tag": "v1.0.0",
+  "targets": [
+    "el/9",
+    "fedora/44",
+    "generic"
+  ],
+  "tool": "ers-proxy",
+  "upstream_sha256": "3fbc4854b04566b46b419581277bfd3316dee61a1c6719bc91714248bd8409bd",
+  "version": "1.0.0-1"
+}
