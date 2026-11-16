@@ -244,7 +244,8 @@ jobs:
 
   verify-post:
     needs: [build, deploy]
-    if: needs.deploy.result == 'success'
+    # !cancelled(): otherwise a skipped verify-pre (upstream of deploy) skips this job too
+    if: ${{ !cancelled() && needs.deploy.result == 'success' }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
