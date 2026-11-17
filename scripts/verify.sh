@@ -41,12 +41,12 @@ sed -e "s|@BASE_URL@|$BASE|g" -e "s|@SUITE@|$suite|g" -e "s|@FINGERPRINT@|$fpr|g
 # is_present:  package is unpacked/installed = download + signature check worked
 case "$fam" in
   deb)
-    prereq='export DEBIAN_FRONTEND=noninteractive; apt-get update -qq && apt-get install -y -qq curl gnupg ca-certificates'
+    prereq='export DEBIAN_FRONTEND=noninteractive; apt-get update -qq && apt-get install -y -qq wget gnupg ca-certificates'
     refresh='apt-get update -qq'
     install_one='DEBIAN_FRONTEND=noninteractive apt-get install -y "$1"'
     is_present='dpkg-query -W -f="\${db:Status-Abbrev}" "$1" 2>/dev/null | grep -q "^i[iUFHWt]"' ;;
   rpm)
-    prereq='dnf install -y gnupg2 ca-certificates; command -v curl >/dev/null || dnf install -y curl'
+    prereq='dnf install -y gnupg2 ca-certificates'
     refresh='dnf -y makecache'
     install_one='dnf install -y "$1"'
     is_present='rpm -q "$1" >/dev/null' ;;
@@ -57,7 +57,7 @@ case "$fam" in
     install_one='pacman -S --noconfirm "$1"'
     is_present='pacman -Q "$1" >/dev/null 2>&1' ;;
   apk)
-    prereq='apk add --no-cache curl gnupg ca-certificates'
+    prereq='apk add --no-cache gnupg ca-certificates'
     refresh='apk update'
     install_one='apk add "$1"'
     is_present='apk info -e "$1" >/dev/null' ;;

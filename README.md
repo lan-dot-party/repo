@@ -3,7 +3,7 @@
 A single signed package repository for all [lan.party](https://lan.party) tools, served at
 <https://repo.lan.party>. It supports apt (deb), dnf/yum (rpm), pacman (Arch) and apk (Alpine).
 
-Users set it up with `curl -fsSL https://repo.lan.party/setup.sh | sudo sh` or with the manual
+Users set it up with `wget -qO- https://repo.lan.party/setup.sh | sudo sh` (or `curl -fsSL … | sudo sh`) or with the manual
 steps on the landing page. Both use the same snippets from `site/snippets/`.
 
 ## How it works
