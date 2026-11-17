@@ -25,6 +25,18 @@ rpm      = '^lanleecher_.+_(amd64|arm64|armv7)\.rpm$'
 arch     = '^lanleecher_.+_(amd64|arm64|armv7)\.pkg\.tar\.zst$'
 apk      = '^lanleecher_.+_(amd64|arm64|armv7)\.apk$'
 
+# Host agent for LANLeecher (Linux, Proxmox VE): same GitHub release as lanleecher, own package.
+[[tool]]
+name     = "lanleecher-agent"
+repo     = "lan-dot-party/LANLeecher"
+homepage = "https://lan.party/lanleecher.php"
+tag      = '^v\d+\.\d+\.\d+$'
+build    = "generic"
+deb      = '^lanleecher-agent_.+_(amd64|arm64|armv7)\.deb$'
+rpm      = '^lanleecher-agent_.+_(amd64|arm64|armv7)\.rpm$'
+arch     = '^lanleecher-agent_.+_(amd64|arm64|armv7)\.pkg\.tar\.zst$'
+apk      = '^lanleecher-agent_.+_(amd64|arm64|armv7)\.apk$'
+
 [[tool]]
 name     = "flowgauge"
 repo     = "lan-dot-party/FlowGauge"
