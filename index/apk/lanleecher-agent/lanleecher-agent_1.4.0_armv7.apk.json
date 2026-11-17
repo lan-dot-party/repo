@@ -1,0 +1,20 @@
+{
+  "arch": "armv7",
+  "asset": "lanleecher-agent_1.4.0_armv7.apk",
+  "fmt": "apk",
+  "fragment": {
+    "filename": "lanleecher-agent-1.4.0.apk",
+    "stanza": "C:Q1o0shvCnwMZtLa+XwEnM7YZg35pw=\nP:lanleecher-agent\nV:1.4.0\nA:armv7\nS:3050069\nI:7088039\nT:Host agent for LANLeecher.\nU:https://github.com/lan-dot-party/LANLeecher\nL:MIT\nm:lan-dot-party"
+  },
+  "pkgname": "lanleecher-agent",
+  "pool_paths": [
+    "alpine/main/armv7/lanleecher-agent-1.4.0.apk"
+  ],
+  "sha256": "9dfad91b042894cbcbd1fce7263bf0043ed8e26c6b309abcb5bc5324e322abb8",
+  "size": 3050069,
+  "tag": "v1.4.0",
+  "targets": [],
+  "tool": "lanleecher-agent",
+  "upstream_sha256": "9dfad91b042894cbcbd1fce7263bf0043ed8e26c6b309abcb5bc5324e322abb8",
+  "version": "1.4.0"
+}

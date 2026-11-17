@@ -1,0 +1,25 @@
+{
+  "arch": "armhf",
+  "asset": "lanleecher-agent_1.4.0_armv7.deb",
+  "fmt": "deb",
+  "fragment": {
+    "stanza": "Package: lanleecher-agent\nArchitecture: armhf\nVersion: 1.4.0\nPriority: optional\nSection: net\nMaintainer: lan-dot-party\nInstalled-Size: 6921\nDepends: ca-certificates\nFilename: pool/lanleecher-agent/lanleecher-agent_1.4.0_armv7.deb\nSize: 2954164\nMD5sum: 4bb2628b63072a6903560280fbef04bc\nSHA1: 989cc38058eb3dc63e53caed6731e1d0fc8690ee\nSHA256: a290ceb0456a6af9bd7e0c9154efddca928d56d8dae58239b1b133a789397a9d\nSHA512: 5c0304d77a9d25892a7aac58429e7b536c9041760dd67ab6b1b9633f549696deac09cbc773653a1257bc1d5bb746f421c3e6e7bbdb3c458a4335f2d7aa1cff7d\nHomepage: https://github.com/lan-dot-party/LANLeecher\nDescription: Host agent for LANLeecher.\n Reports the traffic per MAC address of a Linux host and of the guests of a\n Proxmox VE node, so that LANLeecher can split switch ports with several\n MAC addresses (hypervisors) between them."
+  },
+  "pkgname": "lanleecher-agent",
+  "pool_paths": [
+    "deb/pool/lanleecher-agent/lanleecher-agent_1.4.0_armv7.deb"
+  ],
+  "sha256": "a290ceb0456a6af9bd7e0c9154efddca928d56d8dae58239b1b133a789397a9d",
+  "size": 2954164,
+  "tag": "v1.4.0",
+  "targets": [
+    "bookworm",
+    "trixie",
+    "noble",
+    "resolute",
+    "stable"
+  ],
+  "tool": "lanleecher-agent",
+  "upstream_sha256": "a290ceb0456a6af9bd7e0c9154efddca928d56d8dae58239b1b133a789397a9d",
+  "version": "1.4.0"
+}
