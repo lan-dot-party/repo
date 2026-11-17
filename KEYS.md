@@ -91,5 +91,5 @@ clients only need to refresh the key (`apt`: re-download `lan-party.gpg`; `dnf`:
 1. Generate a new key as above and publish the new public key next to the old one.
 2. Switch the GitHub secrets to the new key; the next publish signs everything with it.
 3. Update `keys/lan-party.asc` and announce the new fingerprint on the landing page and in the release notes.
-4. Users re-run the setup (`curl -fsSL https://repo.lan.party/setup.sh | sudo sh`) or re-import the key.
+4. Users re-run the setup (`wget -qO- https://repo.lan.party/setup.sh | sudo sh`) or re-import the key.
 5. Revoke the old key with its revocation certificate once everybody has migrated, and publish the revocation.

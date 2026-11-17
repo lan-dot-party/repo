@@ -1,8 +1,16 @@
 #!/bin/sh
 # lan.party package repository - quick setup.
-# Usage: curl -fsSL @BASE_URL@/setup.sh | sudo sh
+# Usage: wget -qO- @BASE_URL@/setup.sh | sudo sh
+#    or: curl -fsSL @BASE_URL@/setup.sh | sudo sh
 # The snippets below are generated from site/snippets/*.sh and are exactly the
 # commands shown on the landing page.
+
+# Fail early: abort on any error and on unset variables. pipefail where the
+# shell supports it (dash >= 0.5.12, busybox ash, bash). No -x: run
+# "sh -x setup.sh" yourself if you want to trace it.
+set -eu
+# shellcheck disable=SC3040
+(set -o pipefail) 2>/dev/null && set -o pipefail
 
 BASE_URL='@BASE_URL@'
 KNOWN_SUITES='@SUITES@'
@@ -17,7 +25,12 @@ die() {
 
 run_snippet() {
     # $1 = snippet text, $2 = deb suite (only used by the deb snippets)
-    printf '%s\n' "$1" | sed "s|@SUITE@|$2|g" | sh -e
+    printf '%s\n' "$1" | sed "s|@SUITE@|$2|g" | sh -eu
+}
+
+# need <command> <install hint>: stop before running a snippet that would fail
+need() {
+    command -v "$1" >/dev/null 2>&1 || die "'$1' is required but not installed. Install it first: $2"
 }
 
 has_word() {
@@ -28,7 +41,7 @@ has_word() {
 }
 
 main() {
-    [ "$(id -u)" -eq 0 ] || die "please run as root (curl -fsSL $BASE_URL/setup.sh | sudo sh)"
+    [ "$(id -u)" -eq 0 ] || die "please run as root (wget -qO- $BASE_URL/setup.sh | sudo sh)"
     [ -r /etc/os-release ] || die "/etc/os-release not found, see $MANUAL_URL"
 
     . /etc/os-release
@@ -65,13 +78,20 @@ main() {
                 printf 'Warning: codename "%s" is not served by this repository, using "stable" (only distribution-independent packages).\n' "$suite" >&2
                 suite=stable
             fi
+            need wget "apt-get install wget ca-certificates"
             run_snippet "$SNIP_DEB_SOURCES" "$suite"
             ;;
         rpm-el) run_snippet "$SNIP_RPM_EL" "" ;;
         rpm-fedora) run_snippet "$SNIP_RPM_FEDORA" "" ;;
-        arch) run_snippet "$SNIP_ARCH" "" ;;
-        alpine) run_snippet "$SNIP_ALPINE" "" ;;
-    esac
+        arch)
+            need curl "pacman -S curl"
+            run_snippet "$SNIP_ARCH" ""
+            ;;
+        alpine)
+            need wget "apk add wget"
+            run_snippet "$SNIP_ALPINE" ""
+            ;;
+    esac || die "setting up the repository failed (see the error above), manual steps: $MANUAL_URL"
 
     printf 'Done. Browse the available packages at %s/\n' "$BASE_URL"
 }
