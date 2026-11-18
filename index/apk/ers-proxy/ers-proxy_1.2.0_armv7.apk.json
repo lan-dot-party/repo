@@ -1,0 +1,20 @@
+{
+  "arch": "armv7",
+  "asset": "ers-proxy_1.2.0_armv7.apk",
+  "fmt": "apk",
+  "fragment": {
+    "filename": "ers-proxy-1.2.0.apk",
+    "stanza": "C:Q1uBRu4CFJFAMpib8sjhHu30kuLFU=\nP:ers-proxy\nV:1.2.0\nA:armv7\nS:7677889\nI:18436313\nT:Portal for the web interfaces of network devices.\nU:https://github.com/lan-dot-party/ERS-Proxy\nL:MIT\nm:LAN.party <gamie@lan.party>"
+  },
+  "pkgname": "ers-proxy",
+  "pool_paths": [
+    "alpine/main/armv7/ers-proxy-1.2.0.apk"
+  ],
+  "sha256": "d86ad735ca54ef15a5a0c9cee4e558959d23e0906c62aa4ee6acbdbf21e24d8d",
+  "size": 7677889,
+  "tag": "v1.2.0",
+  "targets": [],
+  "tool": "ers-proxy",
+  "upstream_sha256": "d86ad735ca54ef15a5a0c9cee4e558959d23e0906c62aa4ee6acbdbf21e24d8d",
+  "version": "1.2.0"
+}

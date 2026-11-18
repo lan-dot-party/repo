@@ -1,0 +1,25 @@
+{
+  "arch": "arm64",
+  "asset": "ers-proxy_1.2.0_arm64.deb",
+  "fmt": "deb",
+  "fragment": {
+    "stanza": "Package: ers-proxy\nArchitecture: arm64\nVersion: 1.2.0\nPriority: optional\nSection: net\nMaintainer: LAN.party <gamie@lan.party>\nInstalled-Size: 17684\nDepends: ca-certificates\nFilename: pool/ers-proxy/ers-proxy_1.2.0_arm64.deb\nSize: 7236644\nMD5sum: adda7d917bcf5336adf3b0a4123a8f41\nSHA1: a437afb7ba2dee194416e0ad403ef713ad6e36d1\nSHA256: ebd18316578bf3071470b691dcb8276b123cf0f1ee2a7a7bb13eb25d5f9835a8\nSHA512: a9de27514ffe25add8646187ba7cb13df88bb21da693c64e54a298bcdc9da9f8f902e65f8f06a7e57b64ba33e549638369b32244001d8a49c2f32c47641840d6\nHomepage: https://github.com/lan-dot-party/ERS-Proxy\nDescription: Portal for the web interfaces of network devices.\n ERS-Proxy makes the Enterprise Device Manager (EDM) of Avaya/Extreme ERS\n switches work in modern browsers and opens all devices of a site in tabs\n of one web UI, with browser isolation and certificate pinning."
+  },
+  "pkgname": "ers-proxy",
+  "pool_paths": [
+    "deb/pool/ers-proxy/ers-proxy_1.2.0_arm64.deb"
+  ],
+  "sha256": "ebd18316578bf3071470b691dcb8276b123cf0f1ee2a7a7bb13eb25d5f9835a8",
+  "size": 7236644,
+  "tag": "v1.2.0",
+  "targets": [
+    "bookworm",
+    "trixie",
+    "noble",
+    "resolute",
+    "stable"
+  ],
+  "tool": "ers-proxy",
+  "upstream_sha256": "ebd18316578bf3071470b691dcb8276b123cf0f1ee2a7a7bb13eb25d5f9835a8",
+  "version": "1.2.0"
+}

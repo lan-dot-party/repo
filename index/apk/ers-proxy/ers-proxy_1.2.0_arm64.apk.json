@@ -1,0 +1,20 @@
+{
+  "arch": "aarch64",
+  "asset": "ers-proxy_1.2.0_arm64.apk",
+  "fmt": "apk",
+  "fragment": {
+    "filename": "ers-proxy-1.2.0.apk",
+    "stanza": "C:Q18HIEEzm3f9xmSNF2uXRmSp8fpnE=\nP:ers-proxy\nV:1.2.0\nA:aarch64\nS:7504644\nI:18108633\nT:Portal for the web interfaces of network devices.\nU:https://github.com/lan-dot-party/ERS-Proxy\nL:MIT\nm:LAN.party <gamie@lan.party>"
+  },
+  "pkgname": "ers-proxy",
+  "pool_paths": [
+    "alpine/main/aarch64/ers-proxy-1.2.0.apk"
+  ],
+  "sha256": "aa2b081d42343b50a86ddb185c577797e7b19148f0591098e129529b73e85bae",
+  "size": 7504644,
+  "tag": "v1.2.0",
+  "targets": [],
+  "tool": "ers-proxy",
+  "upstream_sha256": "aa2b081d42343b50a86ddb185c577797e7b19148f0591098e129529b73e85bae",
+  "version": "1.2.0"
+}

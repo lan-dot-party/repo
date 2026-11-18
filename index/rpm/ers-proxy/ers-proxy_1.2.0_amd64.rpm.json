@@ -1,0 +1,25 @@
+{
+  "arch": "x86_64",
+  "asset": "ers-proxy_1.2.0_amd64.rpm",
+  "fmt": "rpm",
+  "fragment": {
+    "filelists": "<package pkgid=\"f787ce13709494faec4ad8ef5bf1d4e02cee644f49299ad58970b618d932cdd5\" name=\"ers-proxy\" arch=\"x86_64\">\n  <version epoch=\"0\" ver=\"1.2.0\" rel=\"1\"/>\n  <file>/etc/ers-proxy/config.yaml</file>\n  <file>/usr/bin/ers-proxy</file>\n  <file>/usr/lib/systemd/system/ers-proxy.service</file>\n  <file>/usr/lib/sysusers.d/ers-proxy.conf</file>\n  <file>/usr/share/doc/ers-proxy/README.md</file>\n  <file>/usr/share/doc/ers-proxy/config.example.yaml</file>\n  <file>/usr/share/doc/ers-proxy/reverse-proxy.md</file>\n  <file>/usr/share/licenses/ers-proxy/LICENSE</file>\n</package>",
+    "other": "<package pkgid=\"f787ce13709494faec4ad8ef5bf1d4e02cee644f49299ad58970b618d932cdd5\" name=\"ers-proxy\" arch=\"x86_64\">\n  <version epoch=\"0\" ver=\"1.2.0\" rel=\"1\"/>\n</package>",
+    "primary": "<package type=\"rpm\">\n  <name>ers-proxy</name>\n  <arch>x86_64</arch>\n  <version epoch=\"0\" ver=\"1.2.0\" rel=\"1\"/>\n  <checksum type=\"sha256\" pkgid=\"YES\">f787ce13709494faec4ad8ef5bf1d4e02cee644f49299ad58970b618d932cdd5</checksum>\n  <summary>Portal for the web interfaces of network devices.</summary>\n  <description>Portal for the web interfaces of network devices.\nERS-Proxy makes the Enterprise Device Manager (EDM) of Avaya/Extreme ERS\nswitches work in modern browsers and opens all devices of a site in tabs\nof one web UI, with browser isolation and certificate pinning.</description>\n  <packager>LAN.party &lt;gamie@lan.party&gt;</packager>\n  <url>https://github.com/lan-dot-party/ERS-Proxy</url>\n  <time file=\"1794990849\" build=\"1794990426\"/>\n  <size package=\"8060213\" installed=\"19226841\" archive=\"19228164\"/>\n  <location xml:base=\"https://repo.lan.party/rpm/pool/ers-proxy/\" href=\"ers-proxy_1.2.0_amd64.rpm\"/>\n  <format>\n    <rpm:license>MIT</rpm:license>\n    <rpm:vendor>lan-dot-party</rpm:vendor>\n    <rpm:group></rpm:group>\n    <rpm:buildhost>runnervm8axu0</rpm:buildhost>\n    <rpm:sourcerpm>ers-proxy-1.2.0-1.src.rpm</rpm:sourcerpm>\n    <rpm:header-range start=\"936\" end=\"6960\"/>\n    <rpm:provides>\n      <rpm:entry name=\"ers-proxy\" flags=\"EQ\" epoch=\"0\" ver=\"1.2.0\" rel=\"1\"/>\n      <rpm:entry name=\"ers-proxy(x86-64)\" flags=\"EQ\" epoch=\"0\" ver=\"1.2.0\" rel=\"1\"/>\n    </rpm:provides>\n    <rpm:requires>\n      <rpm:entry name=\"ca-certificates\"/>\n    </rpm:requires>\n    <file>/etc/ers-proxy/config.yaml</file>\n    <file>/usr/bin/ers-proxy</file>\n  </format>\n</package>"
+  },
+  "pkgname": "ers-proxy",
+  "pool_paths": [
+    "rpm/pool/ers-proxy/ers-proxy_1.2.0_amd64.rpm"
+  ],
+  "sha256": "f787ce13709494faec4ad8ef5bf1d4e02cee644f49299ad58970b618d932cdd5",
+  "size": 8060213,
+  "tag": "v1.2.0",
+  "targets": [
+    "el/9",
+    "fedora/44",
+    "generic"
+  ],
+  "tool": "ers-proxy",
+  "upstream_sha256": "b99fab714ac93131265aa734b26912971edd54a80ee37227ab16bd00dd3c12de",
+  "version": "1.2.0-1"
+}
