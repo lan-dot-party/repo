@@ -1,0 +1,23 @@
+{
+  "arch": "x86_64",
+  "asset": "lanleecher-agent_1.4.1_amd64.pkg.tar.zst",
+  "fmt": "arch",
+  "fragment": {
+    "desc": "%FILENAME%\nlanleecher-agent_1.4.1_amd64.pkg.tar.zst\n\n%NAME%\nlanleecher-agent\n\n%BASE%\nlanleecher-agent\n\n%VERSION%\n1.4.1-1\n\n%DESC%\nHost agent for LANLeecher. Reports the traffic per MAC address of a Linux host and of the guests of a Proxmox VE node, so that LANLeecher can split switch ports with several MAC addresses (hypervisors) between them.\n\n%CSIZE%\n3103117\n\n%ISIZE%\n7239591\n\n%MD5SUM%\nea62b68d0cd9d23b74727cc9aa87d1bc\n\n%SHA256SUM%\n36963c6a53207b7811154d210a168f1394d4c5a5104bf6ddd6691ae6fc61fa7f\n\n%PGPSIG%\niQIzBAABCAAdFiEEvE9/LFqnEo4b+hBc9H8/gamISgUFAmr9aCIACgkQ9H8/gamISgVYjRAAuaDOxUs5H4tHo6o6yi1rI15n66HF4S9RTddvejpftu84ALKS9RMgaCPGlE37Myr0qXpqPOygkTVV0hM9ARBHDBDhkHwHpvXXSGITDDNrvFb7rr6m54T8H8bI6a3bLDubuSgKdZBB9xgpSIimSplqGAF+xWBfR9yjC7xwucz84vGs5q4q//ip9WlKHAS0LhlXwKpzAPDx4AHupND7ROOBbJW/wDSF0PuhcGUY2v0R24QVLLecZdOQXg2VWa9ursaZR1KLbrZDtx+xoqpuOdp0N68+W6QLK/oQyUtiX8txKhohvgDHspPA6IV7UcLvFHfAUWathgfmPkx0Lwoz4IpGRbxJnV13YtQND6eg0seia+v+hGeCvZdMieljXc2tWcqvuf2QuWrce5XLiLfGy8MGvc/eGSaXbRgCgKhuqzEwKunQ5HHmpvOmfFZU4yRjQnTnXVKvjR1cvUi1KidZ2VlwPAQBO+/T3cpSFJaQ4NYz/66HzTiFq9tqAD5YPdg21Qe19xwB/sjX6p+NQ5wcuDO7eOo8rW+WrS7iE6LhR0i0tF2yyzHKpsOZHekA4B3RKfHPhiP1hV/XJ27WUOy+to9ATB1U344f/nUDCnfvaSHk4k1kBN1MOIsf52IeN6tOW+LCCmhh4xdde8IfF2VieFeI5mM/ijjXGlyPeZ/mhjbeNbw=\n\n%URL%\nhttps://github.com/lan-dot-party/LANLeecher\n\n%LICENSE%\nMIT\n\n%ARCH%\nx86_64\n\n%BUILDDATE%\n1794991834\n\n%PACKAGER%\nlan-dot-party\n\n%DEPENDS%\nca-certificates\n\n%BACKUP%\netc/lanleecher/agent.conf\n\n",
+    "files": "%FILES%\netc/\netc/lanleecher/\netc/lanleecher/agent.conf\nusr/\nusr/bin/\nusr/bin/lanleecher-agent\nusr/lib/\nusr/lib/systemd/\nusr/lib/systemd/system/\nusr/lib/systemd/system/lanleecher-agent.service\nusr/lib/sysusers.d/\nusr/lib/sysusers.d/lanleecher-agent.conf\nusr/share/\nusr/share/doc/\nusr/share/doc/lanleecher-agent/\nusr/share/doc/lanleecher-agent/agent.md\nusr/share/licenses/\nusr/share/licenses/lanleecher-agent/\nusr/share/licenses/lanleecher-agent/LICENSE\n",
+    "name": "lanleecher-agent",
+    "pkgver": "1.4.1-1"
+  },
+  "pkgname": "lanleecher-agent",
+  "pool_paths": [
+    "arch/x86_64/lanleecher-agent_1.4.1_amd64.pkg.tar.zst",
+    "arch/x86_64/lanleecher-agent_1.4.1_amd64.pkg.tar.zst.sig"
+  ],
+  "sha256": "36963c6a53207b7811154d210a168f1394d4c5a5104bf6ddd6691ae6fc61fa7f",
+  "size": 3103117,
+  "tag": "v1.4.1",
+  "targets": [],
+  "tool": "lanleecher-agent",
+  "upstream_sha256": "36963c6a53207b7811154d210a168f1394d4c5a5104bf6ddd6691ae6fc61fa7f",
+  "version": "1.4.1-1"
+}

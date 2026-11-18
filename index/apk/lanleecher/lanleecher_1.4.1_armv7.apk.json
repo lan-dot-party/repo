@@ -1,0 +1,20 @@
+{
+  "arch": "armv7",
+  "asset": "lanleecher_1.4.1_armv7.apk",
+  "fmt": "apk",
+  "fragment": {
+    "filename": "lanleecher-1.4.1.apk",
+    "stanza": "C:Q1n5yUHvHVQ8efzjeYvvMs/LOgPsA=\nP:lanleecher\nV:1.4.1\nA:armv7\nS:7738828\nI:17646058\nT:Traffic rankings per client for LAN parties.\nU:https://github.com/lan-dot-party/LANLeecher\nL:MIT\nm:lan-dot-party"
+  },
+  "pkgname": "lanleecher",
+  "pool_paths": [
+    "alpine/main/armv7/lanleecher-1.4.1.apk"
+  ],
+  "sha256": "80b8a2cd8c905e1b17b882b2f93baf99787fa653f56eb51b5adadda0d06a464e",
+  "size": 7738828,
+  "tag": "v1.4.1",
+  "targets": [],
+  "tool": "lanleecher",
+  "upstream_sha256": "80b8a2cd8c905e1b17b882b2f93baf99787fa653f56eb51b5adadda0d06a464e",
+  "version": "1.4.1"
+}

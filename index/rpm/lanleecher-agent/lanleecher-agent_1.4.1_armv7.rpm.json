@@ -1,0 +1,25 @@
+{
+  "arch": "armv7hl",
+  "asset": "lanleecher-agent_1.4.1_armv7.rpm",
+  "fmt": "rpm",
+  "fragment": {
+    "filelists": "<package pkgid=\"490ef40fe5115f81db4e5abf926e7aea9a77ad0002a66fd94920b8a524cb252e\" name=\"lanleecher-agent\" arch=\"armv7hl\">\n  <version epoch=\"0\" ver=\"1.4.1\" rel=\"1\"/>\n  <file>/etc/lanleecher/agent.conf</file>\n  <file>/usr/bin/lanleecher-agent</file>\n  <file>/usr/lib/systemd/system/lanleecher-agent.service</file>\n  <file>/usr/lib/sysusers.d/lanleecher-agent.conf</file>\n  <file>/usr/share/doc/lanleecher-agent/agent.md</file>\n  <file>/usr/share/licenses/lanleecher-agent/LICENSE</file>\n</package>",
+    "other": "<package pkgid=\"490ef40fe5115f81db4e5abf926e7aea9a77ad0002a66fd94920b8a524cb252e\" name=\"lanleecher-agent\" arch=\"armv7hl\">\n  <version epoch=\"0\" ver=\"1.4.1\" rel=\"1\"/>\n</package>",
+    "primary": "<package type=\"rpm\">\n  <name>lanleecher-agent</name>\n  <arch>armv7hl</arch>\n  <version epoch=\"0\" ver=\"1.4.1\" rel=\"1\"/>\n  <checksum type=\"sha256\" pkgid=\"YES\">490ef40fe5115f81db4e5abf926e7aea9a77ad0002a66fd94920b8a524cb252e</checksum>\n  <summary>Host agent for LANLeecher.</summary>\n  <description>Host agent for LANLeecher.\nReports the traffic per MAC address of a Linux host and of the guests of a\nProxmox VE node, so that LANLeecher can split switch ports with several\nMAC addresses (hypervisors) between them.</description>\n  <packager>lan-dot-party</packager>\n  <url>https://github.com/lan-dot-party/LANLeecher</url>\n  <time file=\"1794992161\" build=\"1794991834\"/>\n  <size package=\"3023868\" installed=\"7088039\" archive=\"7089080\"/>\n  <location xml:base=\"https://repo.lan.party/rpm/pool/lanleecher-agent/\" href=\"lanleecher-agent_1.4.1_armv7.rpm\"/>\n  <format>\n    <rpm:license>MIT</rpm:license>\n    <rpm:vendor>lan-dot-party</rpm:vendor>\n    <rpm:group></rpm:group>\n    <rpm:buildhost>ip-10-0-129-34</rpm:buildhost>\n    <rpm:sourcerpm>lanleecher-agent-1.4.1-1.src.rpm</rpm:sourcerpm>\n    <rpm:header-range start=\"936\" end=\"6692\"/>\n    <rpm:provides>\n      <rpm:entry name=\"lanleecher-agent\" flags=\"EQ\" epoch=\"0\" ver=\"1.4.1\" rel=\"1\"/>\n      <rpm:entry name=\"lanleecher-agent(armv7hl-32)\" flags=\"EQ\" epoch=\"0\" ver=\"1.4.1\" rel=\"1\"/>\n    </rpm:provides>\n    <rpm:requires>\n      <rpm:entry name=\"ca-certificates\"/>\n    </rpm:requires>\n    <file>/etc/lanleecher/agent.conf</file>\n    <file>/usr/bin/lanleecher-agent</file>\n  </format>\n</package>"
+  },
+  "pkgname": "lanleecher-agent",
+  "pool_paths": [
+    "rpm/pool/lanleecher-agent/lanleecher-agent_1.4.1_armv7.rpm"
+  ],
+  "sha256": "490ef40fe5115f81db4e5abf926e7aea9a77ad0002a66fd94920b8a524cb252e",
+  "size": 3023868,
+  "tag": "v1.4.1",
+  "targets": [
+    "el/9",
+    "fedora/44",
+    "generic"
+  ],
+  "tool": "lanleecher-agent",
+  "upstream_sha256": "dc8558a11cba315c8e56c4f637586c67e88aac43d9de4341d2538892f010ba40",
+  "version": "1.4.1-1"
+}
