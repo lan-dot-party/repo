@@ -1,0 +1,23 @@
+{
+  "arch": "aarch64",
+  "asset": "flowgauge_1.2.0_linux_arm64.pkg.tar.zst",
+  "fmt": "arch",
+  "fragment": {
+    "desc": "%FILENAME%\nflowgauge_1.2.0_linux_arm64.pkg.tar.zst\n\n%NAME%\nflowgauge\n\n%BASE%\nflowgauge\n\n%VERSION%\n1.2.0-1\n\n%DESC%\nFlowGauge - Bandwidth monitoring with Multi-WAN support. A modular bandwidth testing tool with DSCP tagging, scheduled tests, REST API and Prometheus metrics.\n\n%CSIZE%\n8014588\n\n%ISIZE%\n21766015\n\n%MD5SUM%\n9e420d822d345869fb52d61ad789784e\n\n%SHA256SUM%\n883abaa68e7232639fb2f059783d0f160f4f3e8bd12961654c5b91519c9d3e10\n\n%PGPSIG%\niQIzBAABCAAdFiEEvE9/LFqnEo4b+hBc9H8/gamISgUFAmr+7TQACgkQ9H8/gamISgW/4Q//Yh1IA8qMLRnk5e0Oxj8pD2vMZ0oDNateHdyHTxOCeoo9lRmhjL1jwCC+5veA7qoYlHE7NVJeR7EiTEyDvNtpw/3CUCiW0fld1H7bZ3qcdf4FuvODwyuBU2hua03SkRJ5VcuG1Tl/OuYrvFX5bvo6M29s6UVp3v9svvy38rxtpqwXHBZiY+xi8jMdap1a/IH87IBJgxYnlthdSH6snRU2zCuqGkqc7vkxazg7+KgSrQjXgxBjTJsv81tKNnwcPNo+fO8SBaWdThPwwN9DogNfrqTFQBag/YVdYN5sNTdwymfC5RVE5HkMr7DFw4U3Wb7MxbGj9WM+vIj2orpfqi0zfw55jox9FZPf62LGm4UlYIgAFjXHCIw8/W2uH1NZzXSHYKTYnJ2VpIyj4dT5S18rT6OedbCjVQGXy31cMkI+T7vh5rDl29sfU1VRPVPP4enT1E0Ko+6F+0A+Ml23EP5KzmuoiYfM1oJyWorRJgYmB+HKW+0xargFJJUsY+2o1opZpsUwyLzu0B9qUIZJsEK2rXv5jykj1FBzRdQ9XPgyBXr8q0Z3YRoTrQpfJ8w1VgbcI1MKpmZkXQJq25hs02hYipzvhBaB+2U1IQsO15BmUHV90wqhXC12kBVBxYU7s1yas6F+59yxn+vjR8DYKaezUTsOkpQq6nKas5WIagHmUSo=\n\n%URL%\nhttps://github.com/lan-dot-party/flowgauge\n\n%LICENSE%\nMIT\n\n%ARCH%\naarch64\n\n%BUILDDATE%\n1795091676\n\n%PACKAGER%\nlan-dot-party\n\n%DEPENDS%\nca-certificates\n\n%BACKUP%\netc/flowgauge/config.yaml.example\n\n",
+    "files": "%FILES%\netc/\netc/flowgauge/\netc/flowgauge/config.yaml.example\nusr/\nusr/bin/\nusr/bin/flowgauge\nusr/lib/\nusr/lib/systemd/\nusr/lib/systemd/system/\nusr/lib/systemd/system/flowgauge.service\n",
+    "name": "flowgauge",
+    "pkgver": "1.2.0-1"
+  },
+  "pkgname": "flowgauge",
+  "pool_paths": [
+    "arch/aarch64/flowgauge_1.2.0_linux_arm64.pkg.tar.zst",
+    "arch/aarch64/flowgauge_1.2.0_linux_arm64.pkg.tar.zst.sig"
+  ],
+  "sha256": "883abaa68e7232639fb2f059783d0f160f4f3e8bd12961654c5b91519c9d3e10",
+  "size": 8014588,
+  "tag": "v1.2.0",
+  "targets": [],
+  "tool": "flowgauge",
+  "upstream_sha256": "883abaa68e7232639fb2f059783d0f160f4f3e8bd12961654c5b91519c9d3e10",
+  "version": "1.2.0-1"
+}

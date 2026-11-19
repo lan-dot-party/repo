@@ -1,0 +1,20 @@
+{
+  "arch": "armv7",
+  "asset": "flowgauge_1.2.0_linux_armv7.apk",
+  "fmt": "apk",
+  "fragment": {
+    "filename": "flowgauge-1.2.0.apk",
+    "stanza": "C:Q1wGL51anayKI2ggHwXd6U0KcMjag=\nP:flowgauge\nV:1.2.0\nA:armv7\nS:8622564\nI:22028159\nT:FlowGauge - Bandwidth monitoring with Multi-WAN support.\nU:https://github.com/lan-dot-party/flowgauge\nL:MIT\nm:lan-dot-party"
+  },
+  "pkgname": "flowgauge",
+  "pool_paths": [
+    "alpine/main/armv7/flowgauge-1.2.0.apk"
+  ],
+  "sha256": "8badf1cb66ca5ef6d42f83d2dac838422452b5b915dee271bd0138cdead77425",
+  "size": 8622564,
+  "tag": "v1.2.0",
+  "targets": [],
+  "tool": "flowgauge",
+  "upstream_sha256": "8badf1cb66ca5ef6d42f83d2dac838422452b5b915dee271bd0138cdead77425",
+  "version": "1.2.0"
+}
