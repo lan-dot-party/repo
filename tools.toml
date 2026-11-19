@@ -6,7 +6,7 @@
 [[tool]]
 name     = "ers-proxy"
 repo     = "lan-dot-party/ERS-Proxy"
-homepage = "https://github.com/lan-dot-party/ERS-Proxy"
+homepage = "https://lan.party/ers-proxy.php"
 tag      = '^v\d+\.\d+\.\d+$'
 build    = "generic"
 deb      = '^ers-proxy_.+_(amd64|arm64|armv7)\.deb$'
