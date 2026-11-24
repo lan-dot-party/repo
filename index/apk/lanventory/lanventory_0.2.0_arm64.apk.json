@@ -1,0 +1,20 @@
+{
+  "arch": "aarch64",
+  "asset": "lanventory_0.2.0_arm64.apk",
+  "fmt": "apk",
+  "fragment": {
+    "filename": "lanventory-0.2.0.apk",
+    "stanza": "C:Q1BpPNt6L6bRhVUvstALEPzNHdkmk=\nP:lanventory\nV:0.2.0\nA:aarch64\nS:7884818\nI:17973148\nT:Inventory system for LAN parties.\nU:https://github.com/lan-dot-party/lanventory\nL:MIT\nm:LAN.party <gamie@lan.party>"
+  },
+  "pkgname": "lanventory",
+  "pool_paths": [
+    "alpine/main/aarch64/lanventory-0.2.0.apk"
+  ],
+  "sha256": "726e8c31182126aeb0a284518279b193dfb6226554902f0cee41cef7b1b9d8b9",
+  "size": 7884818,
+  "tag": "v0.2.0",
+  "targets": [],
+  "tool": "lanventory",
+  "upstream_sha256": "726e8c31182126aeb0a284518279b193dfb6226554902f0cee41cef7b1b9d8b9",
+  "version": "0.2.0"
+}

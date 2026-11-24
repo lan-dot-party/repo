@@ -1,0 +1,25 @@
+{
+  "arch": "x86_64",
+  "asset": "lanventory_0.2.0_amd64.rpm",
+  "fmt": "rpm",
+  "fragment": {
+    "filelists": "<package pkgid=\"7e41c2e153c5503084898c53c4c57d1aa6f2427d193f8f2dd52549eaaf6eb689\" name=\"lanventory\" arch=\"x86_64\">\n  <version epoch=\"0\" ver=\"0.2.0\" rel=\"1\"/>\n  <file>/etc/lanventory/config.yaml</file>\n  <file>/usr/bin/lanventory</file>\n  <file>/usr/lib/systemd/system/lanventory.service</file>\n  <file>/usr/lib/sysusers.d/lanventory.conf</file>\n  <file>/usr/share/doc/lanventory/README.md</file>\n  <file>/usr/share/doc/lanventory/config.example.yaml</file>\n  <file>/usr/share/doc/lanventory/reverse-proxy.md</file>\n  <file>/usr/share/licenses/lanventory/LICENSE</file>\n</package>",
+    "other": "<package pkgid=\"7e41c2e153c5503084898c53c4c57d1aa6f2427d193f8f2dd52549eaaf6eb689\" name=\"lanventory\" arch=\"x86_64\">\n  <version epoch=\"0\" ver=\"0.2.0\" rel=\"1\"/>\n</package>",
+    "primary": "<package type=\"rpm\">\n  <name>lanventory</name>\n  <arch>x86_64</arch>\n  <version epoch=\"0\" ver=\"0.2.0\" rel=\"1\"/>\n  <checksum type=\"sha256\" pkgid=\"YES\">7e41c2e153c5503084898c53c4c57d1aa6f2427d193f8f2dd52549eaaf6eb689</checksum>\n  <summary>Inventory system for LAN parties.</summary>\n  <description>Inventory system for LAN parties.\nLANventory tracks assets with inventory numbers, categories and\nconfigurable fields, and the DGUV V3 electrical inspections of equipment.</description>\n  <packager>LAN.party &lt;gamie@lan.party&gt;</packager>\n  <url>https://github.com/lan-dot-party/lanventory</url>\n  <time file=\"1795518672\" build=\"1795517598\"/>\n  <size package=\"8500131\" installed=\"19218332\" archive=\"19219656\"/>\n  <location xml:base=\"https://repo.lan.party/rpm/pool/lanventory/\" href=\"lanventory_0.2.0_amd64.rpm\"/>\n  <format>\n    <rpm:license>MIT</rpm:license>\n    <rpm:vendor>lan-dot-party</rpm:vendor>\n    <rpm:group></rpm:group>\n    <rpm:buildhost>ip-10-0-130-57</rpm:buildhost>\n    <rpm:sourcerpm>lanventory-0.2.0-1.src.rpm</rpm:sourcerpm>\n    <rpm:header-range start=\"936\" end=\"6884\"/>\n    <rpm:provides>\n      <rpm:entry name=\"lanventory\" flags=\"EQ\" epoch=\"0\" ver=\"0.2.0\" rel=\"1\"/>\n      <rpm:entry name=\"lanventory(x86-64)\" flags=\"EQ\" epoch=\"0\" ver=\"0.2.0\" rel=\"1\"/>\n    </rpm:provides>\n    <rpm:requires>\n      <rpm:entry name=\"ca-certificates\"/>\n    </rpm:requires>\n    <file>/etc/lanventory/config.yaml</file>\n    <file>/usr/bin/lanventory</file>\n  </format>\n</package>"
+  },
+  "pkgname": "lanventory",
+  "pool_paths": [
+    "rpm/pool/lanventory/lanventory_0.2.0_amd64.rpm"
+  ],
+  "sha256": "7e41c2e153c5503084898c53c4c57d1aa6f2427d193f8f2dd52549eaaf6eb689",
+  "size": 8500131,
+  "tag": "v0.2.0",
+  "targets": [
+    "el/9",
+    "fedora/44",
+    "generic"
+  ],
+  "tool": "lanventory",
+  "upstream_sha256": "cdbe12c642d436d42d449ffe778bdec5cc8da2b4c85485ed19adbfc66c913714",
+  "version": "0.2.0-1"
+}
