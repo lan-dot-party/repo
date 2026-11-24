@@ -73,7 +73,7 @@ arch     = '^discord-gameserver-notifier-.+-any\.pkg\.tar\.zst$'
 [[tool]]
 name     = "lanventory"
 repo     = "lan-dot-party/LANventory"
-homepage = "https://github.com/lan-dot-party/LANventory"
+homepage = "https://lan.party/lanventory.php"
 tag      = '^v\d+\.\d+\.\d+$'
 build    = "generic"
 deb      = '^lanventory_.+_(amd64|arm64|armv7)\.deb$'
